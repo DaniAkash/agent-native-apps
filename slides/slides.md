@@ -90,7 +90,7 @@ class: light-slide
 <h2>the <em>AI-native</em> world.</h2>
 <p class="welcome__sub">What used to be plain text editors are turning into something else.</p>
 <DevtoolPanel />
-<p class="welcome__caption">Every developer tool, in the same direction.</p>
+<p class="welcome__caption" v-click>Every developer tool, in the same direction.</p>
 </div>
 
 <style scoped>
