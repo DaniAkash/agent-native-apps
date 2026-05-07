@@ -155,8 +155,8 @@ class: light-slide
 
 <div class="ctx">
 <span class="eyebrow">the real bottleneck</span>
-<p class="ctx__quote">It's not who has the<br/>best <em>model.</em></p>
-<p class="ctx__quote ctx__quote--accent">It's who has the<br/>best <em>context.</em></p>
+<p class="ctx__quote">It's not who has the<br/>best <em v-click>model.</em></p>
+<p class="ctx__quote ctx__quote--accent"><span v-click>It's who has the<br/>best </span><em v-click>context.</em></p>
 </div>
 
 <style scoped>
