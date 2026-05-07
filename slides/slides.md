@@ -61,7 +61,7 @@ class: light-slide
 <div class="me__card" v-click>
 <span class="card-eyebrow">open source</span>
 <div class="me__proj"><div class="me__proj-name">Agent Terminal</div><div class="me__proj-desc">A terminal designed for coding agents.</div></div>
-<div class="me__proj"><div class="me__proj-name">acpx</div><div class="me__proj-desc">Tools for one agent to control another.</div></div>
+<div class="me__proj"><div class="me__proj-name">acpx-tools</div><div class="me__proj-desc">Tools for one agent to control another.</div></div>
 </div>
 </div>
 </div>
