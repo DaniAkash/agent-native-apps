@@ -2,7 +2,7 @@
   <div class="end">
     <div class="end__bg" />
     <div class="end__inner">
-      <p class="end__eyebrow">— end of transmission</p>
+      <p class="end__eyebrow">end of transmission</p>
       <h2 class="end__title">build apps the<br/>agent can use.</h2>
       <div class="end__links">
         <a class="end__link" href="https://github.com/DaniAkash">

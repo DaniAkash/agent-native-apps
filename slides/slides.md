@@ -3,7 +3,7 @@ theme: default
 title: Building Agent-Native Apps with JavaScript
 author: Dani Akash
 info: |
-  Building Agent-Native Apps with JavaScript — talk for the
+  Building Agent-Native Apps with JavaScript. Talk for the
   Digital Dreamers Den (D3) Anniversary Meetup.
 colorSchema: light
 transition: fade
@@ -52,10 +52,10 @@ class: light-slide
 
 <div class="me">
 <div class="me__left">
-<span class="eyebrow">— hello, hi, namaste</span>
+<span class="eyebrow">hello, hi, namaste</span>
 <h2 class="me__name">I'm Dani.</h2>
-<p>Founding Engineer at <strong>BrowserOS</strong> — YC W24.</p>
-<p>I build browsers, terminals, and AI assistants — the seams where humans and agents meet.</p>
+<p>Founding Engineer at <strong>BrowserOS</strong> (YC W24).</p>
+<p>I build browsers, terminals, and AI assistants. The seams where humans and agents meet.</p>
 </div>
 <div class="me__right">
 <div class="me__card">
@@ -83,7 +83,7 @@ class: light-slide
 <SoftHaze />
 
 <div class="welcome">
-<span class="eyebrow">— welcome to</span>
+<span class="eyebrow">welcome to</span>
 <h2>the <em>AI-native</em> world.</h2>
 <p class="welcome__sub">What used to be plain text editors are turning into something else.</p>
 <DevtoolPanel />
@@ -106,7 +106,7 @@ class: light-slide
 <HeroGradient />
 
 <div class="shift">
-<span class="eyebrow" style="color: #281950;">— the shift</span>
+<span class="eyebrow" style="color: #281950;">the shift</span>
 <p class="shift__title">The user of the next<br/>generation of software<br/><em>is not a human.</em></p>
 <p class="shift__sub">It's an AI agent on the other side of the keyboard.</p>
 </div>
@@ -126,14 +126,14 @@ class: light-slide
 <SoftHaze />
 
 <div class="signals">
-<span class="eyebrow">— three signals</span>
+<span class="eyebrow">three signals</span>
 <h2>Y Combinator already wrote it down.</h2>
 <div class="signals__grid">
-<SignalCard tag="RFS" brand="Y Combinator" title="Company Brain.">A unified context layer for every business — so agents can act on it.</SignalCard>
+<SignalCard tag="RFS" brand="Y Combinator" title="Company Brain.">A unified context layer for every business, so agents can act on it.</SignalCard>
 <SignalCard tag="RFS" brand="Y Combinator" title="Software for agents.">Apps whose first user is an agent, not a person.</SignalCard>
-<SignalCard tag="GA" brand="Salesforce" title="Headless 360.">Every Salesforce capability via API, MCP, and CLI — no browser needed.</SignalCard>
+<SignalCard tag="GA" brand="Salesforce" title="Headless 360.">Every Salesforce capability via API, MCP, and CLI. No browser needed.</SignalCard>
 </div>
-<p class="signals__pin">Plus <a href="https://entire.io">entire.io</a> — agent coding sessions, stored alongside commits, so the next agent has context.</p>
+<p class="signals__pin">Plus <a href="https://entire.io">entire.io</a>: agent coding sessions, stored alongside commits, so the next agent has context.</p>
 </div>
 
 <style scoped>
@@ -151,7 +151,7 @@ class: light-slide
 <SoftHaze />
 
 <div class="ctx">
-<span class="eyebrow">— the real bottleneck</span>
+<span class="eyebrow">the real bottleneck</span>
 <p class="ctx__quote">It's not who has the<br/>best <em>model.</em></p>
 <p class="ctx__quote ctx__quote--accent">It's who has the<br/>best <em>context.</em></p>
 </div>
@@ -172,7 +172,7 @@ class: light-slide
 
 <div class="lever">
 <div class="lever__left">
-<span class="eyebrow">— the lever</span>
+<span class="eyebrow">the lever</span>
 <h2>Better context in,<br/><em>better output</em> out.</h2>
 <p>The model is mostly fixed week-to-week. The context is yours to shape.</p>
 <p>Every product has the same job now: <strong>be the best source of context for the agent that's about to use it.</strong></p>
@@ -210,7 +210,7 @@ class: light-slide
 <HeroGradient />
 
 <div class="three">
-<span class="eyebrow" style="color: #281950;">— the three substrates</span>
+<span class="eyebrow" style="color: #281950;">the three substrates</span>
 <p class="three__title">How do you ship<br/>context to an agent?</p>
 <div class="three__pills">
 <span class="three__pill">MCP</span>
@@ -240,10 +240,10 @@ class: light-slide
 
 <div class="why">
 <div class="why__left">
-<span class="eyebrow">— and why JavaScript?</span>
+<span class="eyebrow">and why JavaScript?</span>
 <h2>Because the<br/><em>ecosystem</em> is here.</h2>
 <p>Node, Bun, and TypeScript. Hono and Express. The npm registry.</p>
-<p class="muted">Every agent substrate — MCP server, CLI binary, typed API — has a first-class JS path.</p>
+<p class="muted">Every agent substrate (MCP server, CLI binary, typed API) has a first-class JS path.</p>
 </div>
 <div class="why__right">
 <div class="why__stack">
@@ -277,13 +277,13 @@ class: light-slide
 <SoftHaze />
 
 <div class="sub">
-<div class="sub__head"><div class="sub__num">01</div><div><span class="eyebrow">— substrate one</span><h2 class="sub__title">MCP.</h2></div></div>
+<div class="sub__head"><div class="sub__num">01</div><div><span class="eyebrow">substrate one</span><h2 class="sub__title">MCP.</h2></div></div>
 <div class="sub__body">
-<p class="sub__lead">A protocol for agents to discover and call your tools — over JSON-RPC.</p>
+<p class="sub__lead">A protocol for agents to discover and call your tools, over JSON-RPC.</p>
 <div class="sub__grid">
-<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">You ship to many clients.</div><p class="card-body">Claude, ChatGPT, Cursor, Copilot — write the server once, every MCP client gets it.</p></div>
+<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">You ship to many clients.</div><p class="card-body">Claude, ChatGPT, Cursor, Copilot. Write the server once, every MCP client gets it.</p></div>
 <div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">Auth has to survive.</div><p class="card-body">OAuth 2.1 with PKCE, scoped tokens, audience-bound. Refresh handled for you.</p></div>
-<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">Output must be typed.</div><p class="card-body">Structured tool outputs and resource links — parseable, not just printable.</p></div>
+<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">Output must be typed.</div><p class="card-body">Structured tool outputs and resource links. Parseable, not just printable.</p></div>
 </div>
 </div>
 </div>
@@ -305,7 +305,7 @@ class: light-slide
 <SoftHaze />
 
 <div class="build">
-<span class="eyebrow">— build it in JS</span>
+<span class="eyebrow">build it in JS</span>
 <h2>An MCP server is just a <em>middleware.</em></h2>
 
 ```ts
@@ -324,7 +324,7 @@ mcp.tool(
 const app = new Hono().route('/mcp', mcp.handler())
 ```
 
-<p class="build__pin">Tools are functions. Descriptions are docstrings. Auth is a middleware. Same shape as a REST handler — different interface for a different reader.</p>
+<p class="build__pin">Tools are functions. Descriptions are docstrings. Auth is a middleware. Same shape as a REST handler. Different interface for a different reader.</p>
 </div>
 
 <style scoped>
@@ -344,7 +344,7 @@ class: light-slide
 <SoftHaze />
 
 <div class="sub">
-<div class="sub__head"><div class="sub__num">02</div><div><span class="eyebrow">— substrate two</span><h2 class="sub__title">CLI.</h2></div></div>
+<div class="sub__head"><div class="sub__num">02</div><div><span class="eyebrow">substrate two</span><h2 class="sub__title">CLI.</h2></div></div>
 <div class="sub__body">
 <p class="sub__lead">Your whole app, accessible from a shell. <code>gh</code>. <code>kubectl</code>. <code>git</code>.</p>
 <div class="sub__grid">
@@ -372,7 +372,7 @@ class: light-slide
 <SoftHaze />
 
 <div class="build">
-<span class="eyebrow">— build it in JS</span>
+<span class="eyebrow">build it in JS</span>
 <h2><em>npx</em> your way to a CLI.</h2>
 <p class="build__lede">npm already taught the world to run binaries by name. The agent ecosystem inherited it.</p>
 <div class="build__grid">
@@ -401,7 +401,7 @@ class: light-slide
 <SoftHaze />
 
 <div class="sub">
-<div class="sub__head"><div class="sub__num">03</div><div><span class="eyebrow">— substrate three</span><h2 class="sub__title">API.</h2></div></div>
+<div class="sub__head"><div class="sub__num">03</div><div><span class="eyebrow">substrate three</span><h2 class="sub__title">API.</h2></div></div>
 <div class="sub__body">
 <p class="sub__lead">A well-typed API is the highest-leverage thing you can ship for agents you don't control.</p>
 <div class="sub__grid">
@@ -429,7 +429,7 @@ class: light-slide
 <SoftHaze />
 
 <div class="build">
-<span class="eyebrow">— build it in JS</span>
+<span class="eyebrow">build it in JS</span>
 <h2>Typed APIs are <em>almost free</em> in JS.</h2>
 <p class="build__lede">Schemas at the door, types at the call site. Pick your shape.</p>
 <div class="build__list">
@@ -460,7 +460,7 @@ class: light-slide
 <HeroGradient />
 
 <div class="cliff">
-<span class="eyebrow" style="color: #281950;">— what production teams learned</span>
+<span class="eyebrow" style="color: #281950;">what production teams learned</span>
 <h2>The tool-count cliff is <em>real.</em></h2>
 <div class="cliff__grid">
 <StatCard num="40 → 13" label="GitHub Copilot's MCP toolset, after a curation pass." source="2-5pt benchmark gain · 400ms latency win" />
@@ -487,10 +487,10 @@ class: light-slide
 <SoftHaze />
 
 <div class="patterns">
-<span class="eyebrow">— what makes a tool good</span>
+<span class="eyebrow">what makes a tool good</span>
 <h2>Four habits that actually ship.</h2>
 <div class="patterns__grid">
-<div class="card"><div class="card-eyebrow">01</div><div class="card-title">Outcome-oriented tools.</div><p class="card-body">"Close the ticket with evidence" — not <code>tickets.update</code>.</p></div>
+<div class="card"><div class="card-eyebrow">01</div><div class="card-title">Outcome-oriented tools.</div><p class="card-body">"Close the ticket with evidence." Not <code>tickets.update</code>.</p></div>
 <div class="card"><div class="card-eyebrow">02</div><div class="card-title">Structured outputs.</div><p class="card-body">JSON Schema in. JSON Schema out. No guessing.</p></div>
 <div class="card"><div class="card-eyebrow">03</div><div class="card-title">Idempotency keys.</div><p class="card-body">Agents retry. Without a key, they double-charge.</p></div>
 <div class="card"><div class="card-eyebrow">04</div><div class="card-title">Executable errors.</div><p class="card-body">Missing scope. Conflict id. Next step. Make failure actionable.</p></div>
@@ -514,7 +514,7 @@ class: light-slide
 <HeroGradient />
 
 <div class="legacy">
-<span class="eyebrow" style="color: #281950;">— what to do tomorrow</span>
+<span class="eyebrow" style="color: #281950;">what to do tomorrow</span>
 <p class="legacy__title">Bring your old app<br/>into the <em>AI-native</em> era.</p>
 <p class="legacy__sub">Pick one substrate. Ship one tool. Watch what an agent does with it.</p>
 <div class="legacy__steps">
