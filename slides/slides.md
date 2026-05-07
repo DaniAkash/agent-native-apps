@@ -132,11 +132,11 @@ class: light-slide
 <span class="eyebrow">three signals</span>
 <h2>Y Combinator already wrote it down.</h2>
 <div class="signals__grid">
-<SignalCard tag="RFS" brand="Y Combinator" title="Company Brain.">A unified context layer for every business, so agents can act on it.</SignalCard>
-<SignalCard tag="RFS" brand="Y Combinator" title="Software for agents.">Apps whose first user is an agent, not a person.</SignalCard>
-<SignalCard tag="GA" brand="Salesforce" title="Headless 360.">Every Salesforce capability via API, MCP, and CLI. No browser needed.</SignalCard>
+<SignalCard v-click tag="RFS" brand="Y Combinator" title="Company Brain.">A unified context layer for every business, so agents can act on it.</SignalCard>
+<SignalCard v-click tag="RFS" brand="Y Combinator" title="Software for agents.">Apps whose first user is an agent, not a person.</SignalCard>
+<SignalCard v-click tag="GA" brand="Salesforce" title="Headless 360.">Every Salesforce capability via API, MCP, and CLI. No browser needed.</SignalCard>
 </div>
-<p class="signals__pin">Plus <a href="https://entire.io">entire.io</a>: agent coding sessions, stored alongside commits, so the next agent has context.</p>
+<p class="signals__pin" v-click>Plus <a href="https://entire.io">entire.io</a>: agent coding sessions, stored alongside commits, so the next agent has context.</p>
 </div>
 
 <style scoped>
