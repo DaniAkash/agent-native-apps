@@ -183,9 +183,9 @@ class: light-slide
 <div class="lever__right">
 <div class="lever__flow">
 <div class="lever__node lever__node--in"><span class="lever__label">your product</span></div>
-<div class="lever__arrow">→</div>
+<div class="lever__arrow">↓</div>
 <div class="lever__node lever__node--ctx"><span class="lever__label">context</span></div>
-<div class="lever__arrow">→</div>
+<div class="lever__arrow">↓</div>
 <div class="lever__node lever__node--out"><span class="lever__label">agent output</span></div>
 </div>
 </div>
