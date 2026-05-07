@@ -176,7 +176,7 @@ class: light-slide
 <div class="lever">
 <div class="lever__left">
 <span class="eyebrow">the lever</span>
-<h2>Better context in,<br/><em>better output</em> out.</h2>
+<h2><span class="lever__line">Better context in,</span><br/><span class="lever__line"><em>better output</em> out.</span></h2>
 <p>The model is mostly fixed week-to-week. The context is yours to shape.</p>
 <p>Every product has the same job now: <strong>be the best source of context for the agent that's about to use it.</strong></p>
 </div>
@@ -193,8 +193,9 @@ class: light-slide
 
 <style scoped>
 .lever { position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; height: 100%; }
-.lever h2 { font-size: 48px; line-height: 1.1; margin: 12px 0 24px 0; }
+.lever h2 { font-size: 42px; line-height: 1.1; margin: 12px 0 24px 0; }
 .lever h2 em { font-style: italic; color: #7c3aed; }
+.lever__line { display: inline-block; white-space: nowrap; }
 .lever__flow { display: flex; flex-direction: column; gap: 14px; align-items: stretch; }
 .lever__node { background: #ffffff; border-radius: 16px; padding: 22px 24px; box-shadow: rgba(32, 34, 55, 0.075) 0px 0px 0px 1px, rgba(32, 34, 55, 0.05) 0px 10px 15px -3px; position: relative; overflow: hidden; }
 .lever__node::before { content: ""; position: absolute; inset: 0; opacity: 0.18; pointer-events: none; }
