@@ -1,55 +1,58 @@
-# Duolingo — Style Reference
-> Playground Starter Kit
+# Fly.io — Style Reference
+> Whimsical tech playground. Muted violet meets playful pastels on a clean white backdrop.
 
 **Theme:** light
 
-The design feels like an energetic, gamified classroom. Its core is built on a trinity of exuberant choices: the plump, ultra-rounded 'Feather' headline font, the vibrant 'Duo Green' that saturates all primary actions and logos, and the cast of charming, blob-like character illustrations. The layout uses vast white space as a clean canvas, making these colorful elements pop. A signature detail is the 3D-style button, which uses a solid bottom shadow to feel tactile and pressable, a stark contrast to the otherwise flat UI. The entire experience is crafted to feel fun, friendly, and encouraging, turning language learning from a chore into a game.
+This design orchestrates a playful yet competent aesthetic, combining whimsical hand-drawn illustrations with a structured technical layout. Its mood is one of approachable innovation, where complex systems are presented with a friendly, inviting tone. The foundation is a clean, bright canvas, subtly enhanced by soft, multi-color gradients that hint at dynamism and possibility without visual noise. Muted violet tones dominate text and interactive elements, providing a consistent brand presence that is distinctive but not overwhelming.
 
 ## Tokens — Colors
 
 | Name | Value | Token | Role |
 |------|-------|-------|------|
-| Duo Green | `#58cc02` | `--color-duo-green` | Primary CTAs, logos, headlines, interactive highlights — the brand's key signifier of action and identity. |
-| Sky Blue | `#1cb0f6` | `--color-sky-blue` | Secondary outline buttons, inline text links — provides a clear, alternative interactive cue. |
-| Duo Green Light | `#d7ffb8` | `--color-duo-green-light` | Background tints for highlighted or active states, often paired with Duo Green. |
-| Sunshine Yellow | `#ffc700` | `--color-sunshine-yellow` | Used exclusively within illustrations for pops of warmth and energy. |
-| Grape Soda | `#a570ff` | `--color-grape-soda` | Used exclusively within illustrations as a cool, playful accent. |
-| Bubblegum Pink | `#cc348d` | `--color-bubblegum-pink` | Used exclusively within illustrations for vibrant, friendly details. |
-| Snow White | `#ffffff` | `--color-snow-white` | Page backgrounds, button text, card surfaces. |
-| Cloud Gray | `#e5e5e5` | `--color-cloud-gray` | Borders for secondary buttons and dividers. |
-| Silver | `#afafaf` | `--color-silver` | Placeholder text, disabled states, secondary info text. |
-| Graphite | `#777777` | `--color-graphite` | Body copy, descriptive text. |
-| Charcoal | `#4b4b4b` | `--color-charcoal` | Subheadings, secondary headlines. |
-| Almost Black | `#3c3c3c` | `--color-almost-black` | Primary body and UI text. |
+| Cloud White | `#ffffff` | `--color-cloud-white` | Page backgrounds, card surfaces, primary text on dark accents, inactive button backgrounds. |
+| Ghost Gray | `#e7e6f4` | `--color-ghost-gray` | Subtle borders, divider lines, light background accents, hero section tint. |
+| Lavender Mist | `#f1f2f9` | `--color-lavender-mist` | Lightest background for subtle differentiation, similar to Cloud White but with a warmer undertone. |
+| Ash Charcoal | `#000000` | `--color-ash-charcoal` | Primary text for maximum contrast on light backgrounds, navigation elements. |
+| Grape Vine | `#281950` | `--color-grape-vine` | Primary headings, important text, interactive elements in high contrast areas. |
+| Lavender Bloom | `#a39ac1` | `--color-lavender-bloom` | Secondary text, footer links, subtle icons, provides a softer contrast. |
+| Muted Violet | `#5e537c` | `--color-muted-violet` | Body text, general information, ensuring readability while maintaining brand tone. |
+| Electric Violet | `#7c3aed` | `--color-electric-violet` | Primary CTA buttons, active state indicators in navigation, drawing immediate attention. |
+| Deep Plum | `#191034` | `--color-deep-plum` | Darkest background for footer, creating a grounded visual anchor. |
+| Success Green | `#10b981` | `--color-success-green` | Success states, checklist icons, indicating positive feedback. |
+| Info Blue | `#3b82f6` | `--color-info-blue` | Informational icons, secondary accent where a cooler tone is needed. |
+| Warning Orange | `#f59e0b` | `--color-warning-orange` | Warning icons, drawing attention to non-critical alerts. |
+| Accent Gradient Hero | `linear-gradient(to right, rgb(125, 211, 252), rgb(165, 180, 252), rgb(249, 168, 212))` | `--color-accent-gradient-hero` | Large background sections, especially hero and feature areas, providing a soft, shifting visual backdrop. |
+| Accent Gradient Hero Transparent | `linear-gradient(100deg, rgba(125, 211, 252, 0.1), rgba(165, 180, 252, 0.1), rgba(249, 168, 212, 0.1))` | `--color-accent-gradient-hero-transparent` | Subtle overlay gradients for texture or nuanced background effects. |
+| Primary CTA Gradient | `linear-gradient(to right bottom, rgb(160, 43, 228), rgba(0, 0, 0, 0), rgb(79, 70, 229))` | `--color-primary-cta-gradient` | Highlighting primary calls to action with an evocative, vibrant purple. |
 
 ## Tokens — Typography
 
-### feather — Used exclusively for large, impactful headlines (H1, H2). Its extremely rounded, heavy, and slightly condensed character gives the brand its signature playful and confident voice. · `--font-feather`
-- **Substitute:** Fredoka One, Baloo 2
-- **Weights:** 700
-- **Sizes:** 48px, 64px
-- **Line height:** 1.20
-- **Letter spacing:** -0.02em
-- **Role:** Used exclusively for large, impactful headlines (H1, H2). Its extremely rounded, heavy, and slightly condensed character gives the brand its signature playful and confident voice.
+### Mackinac — Display headings and section titles. The slightly condensed, elegant serif face adds a touch of bespoke craftsmanship against the clean modern body text. Negative letter spacing at larger sizes pulls text together, creating a distinguished presence. · `--font-mackinac`
+- **Substitute:** Georgia, serif
+- **Weights:** 500
+- **Sizes:** 22px, 36px, 64px
+- **Line height:** 1.15, 1.33
+- **Letter spacing:** -0.45, -0.25
+- **Role:** Display headings and section titles. The slightly condensed, elegant serif face adds a touch of bespoke craftsmanship against the clean modern body text. Negative letter spacing at larger sizes pulls text together, creating a distinguished presence.
 
-### din-round — The workhorse font for all UI text, body copy, and buttons. The noticeably wide letter-spacing (`0.053em`) is a key trait, creating a very open and readable texture. Weight 700 is used for buttons and emphasized text. · `--font-din-round`
-- **Substitute:** Nunito Sans, Varela Round
-- **Weights:** 500, 700
-- **Sizes:** 13px, 14px, 15px, 17px, 19px, 32px
-- **Line height:** 1.15-1.47
-- **Letter spacing:** 0.053em
-- **Role:** The workhorse font for all UI text, body copy, and buttons. The noticeably wide letter-spacing (`0.053em`) is a key trait, creating a very open and readable texture. Weight 700 is used for buttons and emphasized text.
+### Fricolage Grotesque — Body text, navigation items, buttons, and all smaller textual elements. Its variable weights provide a broad spectrum for hierarchy within UI components, maintaining legibility and a consistent modern feel. The subtle positive letter spacing improves readability in smaller blocks. · `--font-fricolage-grotesque`
+- **Substitute:** Inter, Arial, sans-serif
+- **Weights:** 325, 450, 500, 575
+- **Sizes:** 12px, 15px, 16px, 17px, 18px, 19px
+- **Line height:** 1.50, 1.66
+- **Letter spacing:** 0.025, 0.05
+- **Role:** Body text, navigation items, buttons, and all smaller textual elements. Its variable weights provide a broad spectrum for hierarchy within UI components, maintaining legibility and a consistent modern feel. The subtle positive letter spacing improves readability in smaller blocks.
 
 ### Type Scale
 
 | Role | Size | Line Height | Letter Spacing | Token |
 |------|------|-------------|----------------|-------|
-| caption | 13px | 1.4 | 0.69px | `--text-caption` |
-| body | 15px | 1.4 | 0.8px | `--text-body` |
-| heading-sm | 19px | 1.2 | 1.01px | `--text-heading-sm` |
-| heading | 32px | 1.2 | 1.7px | `--text-heading` |
-| heading-lg | 48px | 1.2 | -0.96px | `--text-heading-lg` |
-| display | 64px | 1.2 | -1.28px | `--text-display` |
+| caption | 12px | 1.5 | 0.025px | `--text-caption` |
+| body-sm | 15px | 1.5 | 0.025px | `--text-body-sm` |
+| heading | 19px | 1.66 | 0.05px | `--text-heading` |
+| heading-lg | 22px | 1.33 | -0.45px | `--text-heading-lg` |
+| display | 36px | 1.15 | -0.25px | `--text-display` |
+| hero-display | 64px | 1.15 | -0.45px | `--text-hero-display` |
 
 ## Tokens — Spacing & Shapes
 
@@ -61,106 +64,138 @@ The design feels like an energetic, gamified classroom. Its core is built on a t
 
 | Name | Value | Token |
 |------|-------|-------|
+| 4 | 4px | `--spacing-4` |
 | 8 | 8px | `--spacing-8` |
 | 12 | 12px | `--spacing-12` |
 | 16 | 16px | `--spacing-16` |
+| 20 | 20px | `--spacing-20` |
 | 24 | 24px | `--spacing-24` |
+| 28 | 28px | `--spacing-28` |
 | 32 | 32px | `--spacing-32` |
 | 40 | 40px | `--spacing-40` |
 | 48 | 48px | `--spacing-48` |
 | 64 | 64px | `--spacing-64` |
 | 80 | 80px | `--spacing-80` |
 | 96 | 96px | `--spacing-96` |
+| 116 | 116px | `--spacing-116` |
+| 128 | 128px | `--spacing-128` |
 
 ### Border Radius
 
 | Element | Value |
 |---------|-------|
-| cards | 12px |
-| inputs | 12px |
-| buttons | 12px |
+| subtle | 4px |
+| buttons | 9999px |
+| navItems | 10px |
+| defaultComponent | 16px |
+
+### Shadows
+
+| Name | Value | Token |
+|------|-------|-------|
+| sm | `rgba(91, 33, 182, 0.1) 0px 5px 5px -2px, rgba(91, 33, 182...` | `--shadow-sm` |
+| subtle | `rgba(67, 56, 202, 0.25) 0px 0px 0px 1px inset` | `--shadow-subtle` |
+| subtle-2 | `rgba(32, 34, 55, 0.075) 0px 0px 0px 1px, rgba(32, 34, 55,...` | `--shadow-subtle-2` |
 
 ### Layout
 
-- **Page max-width:** 1140px
-- **Section gap:** 80-120px
+- **Page max-width:** 1200px
+- **Section gap:** 40px
 - **Card padding:** 24px
 - **Element gap:** 16px
 
 ## Components
 
-### Green Headline
-**Role:** Feature section titles like 'free. fun. effective.'
+### Primary CTA Button
+**Role:** Call to action
 
-Uses the 'feather' font at 48px or 64px with '700' weight and tight letter-spacing (-0.02em). The color is 'Duo Green' ('#58cc02'), making it a vibrant focal point.
+Rounded pill shape with `Electric Violet` background (#7c3aed) and `Cloud White` text (#ffffff), `padding` of 0px vertical and 20px horizontal. Uses `Fricolage Grotesque` at `weight 450`.
 
-### Character Illustration
-**Role:** Visual anchors for every major page section.
+### Outline Ghost Button
+**Role:** Secondary action
 
-Large, organic vector illustrations featuring diverse, playful characters. Built with a palette of 'Duo Green', 'Sunshine Yellow', 'Grape Soda', and 'Bubblegum Pink'. They are flat but use simple layering and occasional gradients for depth.
+Transparent background with `Cloud White` text (#ffffff) and a `0.25` opacity `Cloud White` (#ffffff) border. `Padding 32px` vertical and `16px` horizontal, `borderRadius` 16px. Uses `Fricolage Grotesque` at `weight 450`.
 
-### Inline Text Link
-**Role:** Clickable text within a paragraph.
+### Pill Ghost Button
+**Role:** Tertiary action, navigation
 
-Text is colored 'Sky Blue' ('#1cb0f6') and often includes a subtle underline on hover. It uses the standard 'din-round' body font.
+Transparent background with `Cloud White` text (#ffffff) and a `0.25` opacity `Cloud White` (#ffffff) border. `Padding 0px` vertical and `20px` horizontal, `borderRadius` 9999px. Uses `Fricolage Grotesque` at `weight 450`.
 
-### Language Flag Item
-**Role:** Used in the language selector list.
+### Light Pill Button
+**Role:** Contextual action
 
-A small rectangular flag icon followed by uppercase text (e.g., 'ENGLISH') in 'Graphite' ('#777777'). Uses the 'din-round' font. The whole item is a link.
+`Cloud White` background (#ffffff) with `Grape Vine` text (#281950). Features a subtle shadow `rgba(91, 33, 182, 0.125) 0px 0px 0px 0px`. `Padding 0px` vertical and `20px` horizontal, `borderRadius` 9999px.
+
+### Navigation Link
+**Role:** Global navigation
+
+Text link using `Fricolage Grotesque` `weight 450` in `Muted Violet` (#5e537c). Hover states likely involve color change or subtle underlines, but not explicitly defined in data.
+
+### Header Logo
+**Role:** Brand identity
+
+Vector graphic logo using `Grape Vine` (#281950) with `Cloud White` (#ffffff) as background, positioned within the header bar.
+
+### Hero Section Header
+**Role:** Primary page message
+
+Heavy header text using `Mackinac` `weight 500` at `64px` in `Grape Vine` (#281950), with negative letter-spacing for impact.
 
 ## Do's and Don'ts
 
 ### Do
-- Use 'Duo Green' '#58cc02' for all primary CTAs and brand-voice headlines.
-- Apply a 12px border-radius to all interactive UI components like buttons and inputs.
-- Use the 'feather' font exclusively for large, impactful headlines (48px+).
-- Create depth on primary buttons with a solid, darker green bottom 'shadow' (e.g., `box-shadow: 0 4px 0 #3f8f01`).
-- Pair every major content section with a large, on-brand character illustration.
-- Use 'Sky Blue' '#1cb0f6' for all secondary interactive elements like outline buttons and text links.
-- Set body copy and UI text with 'din-round' and its distinctive `letter-spacing: 0.053em`.
+- Prioritize `Fricolage Grotesque` for all body text and UI labels, ensuring consistent `letter-spacing` as defined in the type scale.
+- Apply `Electric Violet` (#7c3aed) as the singular background color for primary call-to-action buttons, pairing it always with `Cloud White` text (#ffffff).
+- Use `Muted Violet` (#5e537c) for general body text and secondary informational elements to maintain a brand-aligned, readable tone.
+- Employ `Mackinac` `weight 500` for all display and large section headings, utilizing its defined negative letter spacing for stylistic impact.
+- Implement `9999px` corner radius for all primary and secondary button components to achieve a consistent 'pill' shape.
+- Utilize `Ghost Gray` (#e7e6f4) for subtle borders and dividers, providing visual structure without harsh lines.
+- Incorporate the `Accent Gradient Hero` (linear-gradient(to right, rgb(125, 211, 252), rgb(165, 180, 252), rgb(249, 168, 212))) sparingly for wide background sections to add a dynamic, pastel highlight.
 
 ### Don't
-- Don't use sharp corners on any UI element.
-- Don't use any color other than 'Duo Green' '#58cc02' for the main 'Get Started' action.
-- Don't use the 'feather' headline font for small text or body copy.
-- Don't apply traditional `box-shadow` for elevation on panels or cards.
-- Don't create text links in any color other than 'Sky Blue' '#1cb0f6'.
-- Don't use system fonts; the custom 'feather' and 'din-round' styles are integral to the brand.
-- Don't design a section without considering its accompanying illustration.
+- Avoid using `Electric Violet` (#7c3aed) for non-interactive text elements; reserve it strictly for primary calls to action.
+- Do not introduce sharp corners on any interactive components; adhere to a minimum of `16px` radius for structural elements and `9999px` for buttons.
+- Refrain from using strong, single-color shadows for elevation; rely on the subtle `rgba(91, 33, 182, 0.1) 0px 5px 5px -2px, rgba(91, 33, 182, 0.1) 0px 2px 4px -2px` for button elevation.
+- Do not use black for body text; instead, use `Grape Vine` (#281950) or `Muted Violet` (#5e537c) for brand consistency.
+- Ensure all text blocks maintain generous line heights from the type scale (`1.5` or `1.66`) to prevent dense, hard-to-read paragraphs.
+- Avoid arbitrary use of the accent `linear-gradient` for small elements; it is designed for large background areas to provide a subtle, atmospheric shift.
 
 ## Elevation
 
-The system is intentionally flat, avoiding traditional shadows for elevation. Depth is created exclusively on primary buttons using a solid, darker-hue bottom border (emulated via `box-shadow`) that mimics a physical button pad. All other elements like cards and containers remain flat on the Snow White page background.
+- **Light Pill Button:** `rgba(91, 33, 182, 0.1) 0px 5px 5px -2px, rgba(91, 33, 182, 0.1) 0px 2px 4px -2px`
+- **Navigation Item Active State:** `rgba(67, 56, 202, 0.25) 0px 0px 0px 1px inset`
+- **Card/Container Subtle Shadow:** `rgba(32, 34, 55, 0.075) 0px 0px 0px 1px, rgba(32, 34, 55, 0.05) 0px 10px 15px -3px, rgba(32, 34, 55, 0.05) 0px 4px 6px -4px`
 
 ## Imagery
 
-The visual language is defined by a universe of custom vector illustrations. These are not decorative; they are central characters. The style is flat, friendly, and organic, featuring blobby shapes, simple features, and a diverse cast of people and mascots. The color palette for illustrations is an extension of the brand's core colors, adding warm yellows, purples, and pinks. These illustrations are large, often taking up half the screen width, and are always paired with a key message or feature, making the abstract concepts of learning feel tangible and fun.
+The visual language is dominantly characterized by whimsical, hand-drawn vector illustrations featuring pastel color palettes and abstract, flowing forms. These illustrations are not masked or cropped but appear to organically 'spill' across sections or hover as isolated, narrative elements. They are used decoratively to evoke imagination and approachability for complex technical concepts, rather than literal product depiction. Iconography, when present, is simple, filled, and uses the defined accent/semantic colors. The overall density leans towards image-heavy, with illustrations taking significant visual space and often serving as backdrops or scene-setters alongside textual content.
 
 ## Layout
 
-The site uses a centered, max-width layout (approx. 1140px) on an expansive white background. The hero section is asymmetric, with a large illustration on the left and a text block with CTAs on the right. Below the hero, the page flows in generous, vertically-spaced sections. Most sections are either single-column centered text blocks or two-column layouts that alternate between `illustration-left, text-right` and vice-versa. There are no colored background containers; the content and illustrations 'float' on the white page, creating an open, airy, and focused structure.
+The page primarily uses a max-width `1200px` centered container for content, presenting a structured column layout. The hero section breaks this with a full-bleed application of the `Accent Gradient Hero` background, featuring a centered, prominent headline. Subsequent sections often employ a clean, white background with generous vertical spacing (`40px sectionGap`). A common content arrangement is a split layout, featuring text on one side and an accompanying illustration or feature visual on the other, creating a balance between information and visual interest. Navigation is a sticky top bar, containing both textual links and a prominent `Primary CTA Button`. The design feels spacious, with ample breathing room around elements.
 
 ## Agent Prompt Guide
 
 ### Quick Color Reference
-- **Page Background**: `#ffffff` (Snow White)
-- **Primary Text**: `#3c3c3c` (Almost Black)
-- **Primary CTA**: `#58cc02` (Duo Green)
-- **Secondary Action**: `#1cb0f6` (Sky Blue)
-- **Borders**: `#e5e5e5` (Cloud Gray)
+- Text: `Muted Violet` (#5e537c)
+- Background: `Cloud White` (#ffffff)
+- CTA: `Electric Violet` (#7c3aed)
+- Border: `Ghost Gray` (#e7e6f4)
+- Accent: `Lavender Bloom` (#a39ac1)
 
-### Example Component Prompts
-1. **Primary Button**: "Create a button with 'GET STARTED' text. Background is '#58cc02', text is '#ffffff'. Use a 12px border-radius. Font is 'din-round' at 15px, weight 700. Padding is 16px 32px. Add a `box-shadow: 0 4px 0 #3f8f01`."
-2. **Headline**: "Create a headline 'free. fun. effective.'. Font is 'feather' at 64px, weight 700. Color is '#58cc02'. Set letter-spacing to -1.28px."
-3. **Outline Button**: "Create an outline button with 'I ALREADY HAVE AN ACCOUNT' text. Background is transparent. Text color is '#1cb0f6'. Border is 2px solid '#e5e5e5'. Use a 12px border-radius. Font is 'din-round' at 15px, weight 700. Padding is 14px 24px."
+### 3-5 Example Component Prompts
+1. **Create a hero section:** A full-width `Accent Gradient Hero` background, centered with a `hero-display` heading in `Mackinac` `weight 500` (#281950) with `letterSpacing -0.45px`. Below it, `body` text in `Fricolage Grotesque` `weight 450` (#5e537c). Underneath, a `Primary CTA Button` (`Electric Violet` background, `Cloud White` text, `9999px` radius, `padding 0px 20px`).
+2. **Generate a feature card:** Use a `Cloud White` background with `Ghost Gray` as a `1px` subtle border. `Card padding` should be `24px`. The title should be `heading-lg` in `Mackinac` `weight 500` (#281950). Body text should be `body` in `Fricolage Grotesque` `weight 450` (#5e537c).
+3. **Design a secondary navigation button:** Make it a `Light Pill Button` with `Cloud White` background, `Grape Vine` text (#281950), `9999px` radius, and `padding 0px 20px`. Apply the specific button shadow `rgba(91, 33, 182, 0.1) 0px 5px 5px -2px, rgba(91, 33, 182, 0.1) 0px 2px 4px -2px`.
+4. **Build a footer:** Use `Deep Plum` (#191034) as background. Text should be `Lavender Bloom` (#a39ac1) for links and `Fricolage Grotesque` `weight 450` for general content. Ensure `elementGap` is applied between blocks.
 
 ## Similar Brands
 
-- **Headspace** — Nearly identical philosophy of using friendly, rounded illustrations and a soft, approachable UI to demystify a complex topic.
-- **Kahoot!** — Shares the gamified learning aesthetic, with bold primary colors, simple UI, and a focus on fun.
-- **Mailchimp** — Pioneered the use of quirky, brand-defining illustrations and a single-color identity (yellow) in a similar way Duolingo uses green.
-- **Discord** — Employs a custom super-rounded font ('gg sans') and mascot-driven illustrations to create a similarly playful and community-focused atmosphere.
+- **Vercel** — Clean, light UI with strong brand color accents and focus on developer tools. Subtle use of gradients.
+- **Linear** — Sophisticated typography and sparse, intentional visual elements on a primarily light background. Focus on productivity tools.
+- **Raycast** — Developer-focused product with a polished, approachable UI that doesn't overwhelm, featuring subtle background textures/gradients.
+- **Figma** — Playful yet powerful design, leveraging custom illustrations and a vibrant color palette against a clean interface.
+- **PlanetScale** — Modern developer platform with a clean, light aesthetic and a distinctive brand color palette used strategically for impact.
 
 ## Quick Start
 
@@ -169,73 +204,96 @@ The site uses a centered, max-width layout (approx. 1140px) on an expansive whit
 ```css
 :root {
   /* Colors */
-  --color-duo-green: #58cc02;
-  --color-sky-blue: #1cb0f6;
-  --color-duo-green-light: #d7ffb8;
-  --color-sunshine-yellow: #ffc700;
-  --color-grape-soda: #a570ff;
-  --color-bubblegum-pink: #cc348d;
-  --color-snow-white: #ffffff;
-  --color-cloud-gray: #e5e5e5;
-  --color-silver: #afafaf;
-  --color-graphite: #777777;
-  --color-charcoal: #4b4b4b;
-  --color-almost-black: #3c3c3c;
+  --color-cloud-white: #ffffff;
+  --color-ghost-gray: #e7e6f4;
+  --color-lavender-mist: #f1f2f9;
+  --color-ash-charcoal: #000000;
+  --color-grape-vine: #281950;
+  --color-lavender-bloom: #a39ac1;
+  --color-muted-violet: #5e537c;
+  --color-electric-violet: #7c3aed;
+  --color-deep-plum: #191034;
+  --color-success-green: #10b981;
+  --color-info-blue: #3b82f6;
+  --color-warning-orange: #f59e0b;
+  --color-accent-gradient-hero: #7dd3fc;
+  --gradient-accent-gradient-hero: linear-gradient(to right, rgb(125, 211, 252), rgb(165, 180, 252), rgb(249, 168, 212));
+  --color-accent-gradient-hero-transparent: #7dd3fc;
+  --gradient-accent-gradient-hero-transparent: linear-gradient(100deg, rgba(125, 211, 252, 0.1), rgba(165, 180, 252, 0.1), rgba(249, 168, 212, 0.1));
+  --color-primary-cta-gradient: #8b5cf6;
+  --gradient-primary-cta-gradient: linear-gradient(to right bottom, rgb(160, 43, 228), rgba(0, 0, 0, 0), rgb(79, 70, 229));
 
   /* Typography — Font Families */
-  --font-feather: 'feather', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-din-round: 'din-round', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mackinac: 'Mackinac', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-fricolage-grotesque: 'Fricolage Grotesque', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Typography — Scale */
-  --text-caption: 13px;
-  --leading-caption: 1.4;
-  --tracking-caption: 0.69px;
-  --text-body: 15px;
-  --leading-body: 1.4;
-  --tracking-body: 0.8px;
-  --text-heading-sm: 19px;
-  --leading-heading-sm: 1.2;
-  --tracking-heading-sm: 1.01px;
-  --text-heading: 32px;
-  --leading-heading: 1.2;
-  --tracking-heading: 1.7px;
-  --text-heading-lg: 48px;
-  --leading-heading-lg: 1.2;
-  --tracking-heading-lg: -0.96px;
-  --text-display: 64px;
-  --leading-display: 1.2;
-  --tracking-display: -1.28px;
+  --text-caption: 12px;
+  --leading-caption: 1.5;
+  --tracking-caption: 0.025px;
+  --text-body-sm: 15px;
+  --leading-body-sm: 1.5;
+  --tracking-body-sm: 0.025px;
+  --text-heading: 19px;
+  --leading-heading: 1.66;
+  --tracking-heading: 0.05px;
+  --text-heading-lg: 22px;
+  --leading-heading-lg: 1.33;
+  --tracking-heading-lg: -0.45px;
+  --text-display: 36px;
+  --leading-display: 1.15;
+  --tracking-display: -0.25px;
+  --text-hero-display: 64px;
+  --leading-hero-display: 1.15;
+  --tracking-hero-display: -0.45px;
 
   /* Typography — Weights */
+  --font-weight-w325: 325;
+  --font-weight-w450: 450;
   --font-weight-medium: 500;
-  --font-weight-bold: 700;
+  --font-weight-w575: 575;
 
   /* Spacing */
   --spacing-unit: 4px;
+  --spacing-4: 4px;
   --spacing-8: 8px;
   --spacing-12: 12px;
   --spacing-16: 16px;
+  --spacing-20: 20px;
   --spacing-24: 24px;
+  --spacing-28: 28px;
   --spacing-32: 32px;
   --spacing-40: 40px;
   --spacing-48: 48px;
   --spacing-64: 64px;
   --spacing-80: 80px;
   --spacing-96: 96px;
+  --spacing-116: 116px;
+  --spacing-128: 128px;
 
   /* Layout */
-  --page-max-width: 1140px;
-  --section-gap: 80-120px;
+  --page-max-width: 1200px;
+  --section-gap: 40px;
   --card-padding: 24px;
   --element-gap: 16px;
 
   /* Border Radius */
-  --radius-xl: 12px;
+  --radius-md: 4px;
+  --radius-lg: 10px;
+  --radius-2xl: 16px;
+  --radius-2xl-2: 20px;
+  --radius-full: 9999px;
 
   /* Named Radii */
-  --radius-cards: 12px;
-  --radius-inputs: 12px;
-  --radius-buttons: 12px;
+  --radius-subtle: 4px;
+  --radius-buttons: 9999px;
+  --radius-navitems: 10px;
+  --radius-defaultcomponent: 16px;
+
+  /* Shadows */
+  --shadow-sm: rgba(91, 33, 182, 0.1) 0px 5px 5px -2px, rgba(91, 33, 182, 0.1) 0px 2px 4px -2px;
+  --shadow-subtle: rgba(67, 56, 202, 0.25) 0px 0px 0px 1px inset;
+  --shadow-subtle-2: rgba(32, 34, 55, 0.075) 0px 0px 0px 1px, rgba(32, 34, 55, 0.05) 0px 10px 15px -3px, rgba(32, 34, 55, 0.05) 0px 4px 6px -4px;
 }
 ```
 
@@ -244,56 +302,73 @@ The site uses a centered, max-width layout (approx. 1140px) on an expansive whit
 ```css
 @theme {
   /* Colors */
-  --color-duo-green: #58cc02;
-  --color-sky-blue: #1cb0f6;
-  --color-duo-green-light: #d7ffb8;
-  --color-sunshine-yellow: #ffc700;
-  --color-grape-soda: #a570ff;
-  --color-bubblegum-pink: #cc348d;
-  --color-snow-white: #ffffff;
-  --color-cloud-gray: #e5e5e5;
-  --color-silver: #afafaf;
-  --color-graphite: #777777;
-  --color-charcoal: #4b4b4b;
-  --color-almost-black: #3c3c3c;
+  --color-cloud-white: #ffffff;
+  --color-ghost-gray: #e7e6f4;
+  --color-lavender-mist: #f1f2f9;
+  --color-ash-charcoal: #000000;
+  --color-grape-vine: #281950;
+  --color-lavender-bloom: #a39ac1;
+  --color-muted-violet: #5e537c;
+  --color-electric-violet: #7c3aed;
+  --color-deep-plum: #191034;
+  --color-success-green: #10b981;
+  --color-info-blue: #3b82f6;
+  --color-warning-orange: #f59e0b;
+  --color-accent-gradient-hero: #7dd3fc;
+  --color-accent-gradient-hero-transparent: #7dd3fc;
+  --color-primary-cta-gradient: #8b5cf6;
 
   /* Typography */
-  --font-feather: 'feather', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-din-round: 'din-round', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mackinac: 'Mackinac', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-fricolage-grotesque: 'Fricolage Grotesque', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Typography — Scale */
-  --text-caption: 13px;
-  --leading-caption: 1.4;
-  --tracking-caption: 0.69px;
-  --text-body: 15px;
-  --leading-body: 1.4;
-  --tracking-body: 0.8px;
-  --text-heading-sm: 19px;
-  --leading-heading-sm: 1.2;
-  --tracking-heading-sm: 1.01px;
-  --text-heading: 32px;
-  --leading-heading: 1.2;
-  --tracking-heading: 1.7px;
-  --text-heading-lg: 48px;
-  --leading-heading-lg: 1.2;
-  --tracking-heading-lg: -0.96px;
-  --text-display: 64px;
-  --leading-display: 1.2;
-  --tracking-display: -1.28px;
+  --text-caption: 12px;
+  --leading-caption: 1.5;
+  --tracking-caption: 0.025px;
+  --text-body-sm: 15px;
+  --leading-body-sm: 1.5;
+  --tracking-body-sm: 0.025px;
+  --text-heading: 19px;
+  --leading-heading: 1.66;
+  --tracking-heading: 0.05px;
+  --text-heading-lg: 22px;
+  --leading-heading-lg: 1.33;
+  --tracking-heading-lg: -0.45px;
+  --text-display: 36px;
+  --leading-display: 1.15;
+  --tracking-display: -0.25px;
+  --text-hero-display: 64px;
+  --leading-hero-display: 1.15;
+  --tracking-hero-display: -0.45px;
 
   /* Spacing */
+  --spacing-4: 4px;
   --spacing-8: 8px;
   --spacing-12: 12px;
   --spacing-16: 16px;
+  --spacing-20: 20px;
   --spacing-24: 24px;
+  --spacing-28: 28px;
   --spacing-32: 32px;
   --spacing-40: 40px;
   --spacing-48: 48px;
   --spacing-64: 64px;
   --spacing-80: 80px;
   --spacing-96: 96px;
+  --spacing-116: 116px;
+  --spacing-128: 128px;
 
   /* Border Radius */
-  --radius-xl: 12px;
+  --radius-md: 4px;
+  --radius-lg: 10px;
+  --radius-2xl: 16px;
+  --radius-2xl-2: 20px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: rgba(91, 33, 182, 0.1) 0px 5px 5px -2px, rgba(91, 33, 182, 0.1) 0px 2px 4px -2px;
+  --shadow-subtle: rgba(67, 56, 202, 0.25) 0px 0px 0px 1px inset;
+  --shadow-subtle-2: rgba(32, 34, 55, 0.075) 0px 0px 0px 1px, rgba(32, 34, 55, 0.05) 0px 10px 15px -3px, rgba(32, 34, 55, 0.05) 0px 4px 6px -4px;
 }
 ```
