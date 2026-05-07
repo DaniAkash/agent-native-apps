@@ -62,6 +62,7 @@ class: light-slide
 <span class="card-eyebrow">open source</span>
 <div class="me__proj"><div class="me__proj-name">Agent Terminal</div><div class="me__proj-desc">A terminal designed for coding agents.</div></div>
 <div class="me__proj"><div class="me__proj-name">acpx-tools</div><div class="me__proj-desc">Tools for one agent to control another.</div></div>
+<a class="me__link" href="https://github.com/DaniAkash" target="_blank" rel="noreferrer">github.com/DaniAkash</a>
 </div>
 </div>
 </div>
@@ -73,6 +74,8 @@ class: light-slide
 .me__proj { display: flex; flex-direction: column; gap: 4px; }
 .me__proj-name { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 22px; color: #7c3aed; font-style: italic; }
 .me__proj-desc { font-family: "Bricolage Grotesque", sans-serif; font-size: 14px; color: #5e537c; }
+.me__link { font-family: "Bricolage Grotesque", sans-serif; font-size: 12px; font-weight: 575; letter-spacing: 0.08em; color: #7c3aed; text-decoration: none; border-bottom: 1px dashed currentColor; padding-bottom: 1px; align-self: flex-start; margin-top: 4px; }
+.me__link:hover { color: #281950; }
 </style>
 
 ---
