@@ -1038,21 +1038,21 @@ class: light-slide
 <p class="legacy__title">Bring your old app<br/>into the <em>AI-native</em> era.</p>
 <p class="legacy__sub">Pick one substrate. Ship one tool. Watch what an agent does with it.</p>
 <div class="legacy__steps">
-<div class="legacy__step"><span class="legacy__num">01</span><span class="legacy__txt">Wrap your most-used endpoint as an MCP tool.</span></div>
-<div class="legacy__step"><span class="legacy__num">02</span><span class="legacy__txt">Or expose your three most-common workflows as a CLI.</span></div>
-<div class="legacy__step"><span class="legacy__num">03</span><span class="legacy__txt">Or publish an OpenAPI spec and let the agent write the client.</span></div>
+<div class="legacy__step" v-click><span class="legacy__num">01</span><span class="legacy__txt">Wrap your most-used endpoint as an MCP tool.</span></div>
+<div class="legacy__step" v-click><span class="legacy__num">02</span><span class="legacy__txt">Or expose your three most-common workflows as a CLI.</span></div>
+<div class="legacy__step" v-click><span class="legacy__num">03</span><span class="legacy__txt">Or publish an OpenAPI spec and let the agent write the client.</span></div>
 </div>
 </div>
 
 <style scoped>
-.legacy { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; height: 100%; max-width: 1100px; gap: 18px; }
-.legacy__title { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 76px; line-height: 1.02; letter-spacing: -0.035em; color: #281950; margin: 12px 0 8px 0; }
+.legacy { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; height: 100%; max-width: 1100px; gap: 12px; padding: 24px 0 40px; }
+.legacy__title { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 60px; line-height: 1.02; letter-spacing: -0.035em; color: #281950; margin: 4px 0 4px 0; }
 .legacy__title em { font-style: italic; color: #7c3aed; }
-.legacy__sub { font-family: "Bricolage Grotesque", sans-serif; font-size: 22px; color: #281950; font-weight: 575; margin: 0 0 16px 0; }
-.legacy__steps { display: flex; flex-direction: column; gap: 12px; }
-.legacy__step { display: grid; grid-template-columns: 56px 1fr; gap: 18px; align-items: baseline; padding: 14px 22px; border-radius: 12px; background: rgba(255, 255, 255, 0.85); box-shadow: rgba(32, 34, 55, 0.05) 0px 0px 0px 1px; }
-.legacy__num { font-family: "Fraunces", Georgia, serif; font-style: italic; font-weight: 500; font-size: 24px; color: #7c3aed; }
-.legacy__txt { font-family: "Bricolage Grotesque", sans-serif; font-size: 18px; color: #281950; font-weight: 575; }
+.legacy__sub { font-family: "Bricolage Grotesque", sans-serif; font-size: 19px; color: #281950; font-weight: 575; margin: 0 0 8px 0; }
+.legacy__steps { display: flex; flex-direction: column; gap: 10px; }
+.legacy__step { display: grid; grid-template-columns: 48px 1fr; gap: 16px; align-items: baseline; padding: 12px 20px; border-radius: 12px; background: rgba(255, 255, 255, 0.9); box-shadow: rgba(32, 34, 55, 0.05) 0px 0px 0px 1px; }
+.legacy__num { font-family: "Fraunces", Georgia, serif; font-style: italic; font-weight: 500; font-size: 22px; color: #7c3aed; }
+.legacy__txt { font-family: "Bricolage Grotesque", sans-serif; font-size: 17px; color: #281950; font-weight: 575; }
 </style>
 
 ---
