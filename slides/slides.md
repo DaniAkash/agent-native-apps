@@ -372,9 +372,9 @@ class: light-slide
 <div class="sub__body">
 <p class="sub__lead">Your whole app, accessible from a shell. <code>gh</code>. <code>kubectl</code>. <code>git</code>.</p>
 <div class="sub__grid">
-<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">Token budget is tight.</div><p class="card-body">A CLI's surface is paid for in pretraining. <code>tools/list</code> ships every session.</p></div>
-<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">The agent has a shell.</div><p class="card-body">Claude Code and Codex thrive on <code>gh pr list --json … | jq</code>. Pipes are still the best protocol.</p></div>
-<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">You need 100+ operations.</div><p class="card-body"><code>gh</code> exposes hundreds of subcommands. No MCP will match that breadth.</p></div>
+<div class="card" v-click><div class="card-eyebrow">Wins when</div><div class="card-title">Token budget is tight.</div><p class="card-body">A CLI's surface is paid for in pretraining. <code>tools/list</code> ships every session.</p></div>
+<div class="card" v-click><div class="card-eyebrow">Wins when</div><div class="card-title">The agent has a shell.</div><p class="card-body">Claude Code and Codex thrive on <code>gh pr list --json … | jq</code>. Pipes are still the best protocol.</p></div>
+<div class="card" v-click><div class="card-eyebrow">Wins when</div><div class="card-title">You need 100+ operations.</div><p class="card-body"><code>gh</code> exposes hundreds of subcommands. No MCP will match that breadth.</p></div>
 </div>
 </div>
 </div>
