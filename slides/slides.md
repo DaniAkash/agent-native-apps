@@ -246,15 +246,14 @@ class: light-slide
 <div class="why__left">
 <span class="eyebrow">and why JavaScript?</span>
 <h2>Because the<br/><em>ecosystem</em> is here.</h2>
-<p>Node, Bun, and TypeScript. Hono and Express. The npm registry.</p>
 <p class="muted">Every agent substrate (MCP server, CLI binary, typed API) has a first-class JS path.</p>
 </div>
 <div class="why__right">
 <div class="why__stack">
-<div class="why__layer why__layer--ui"><span class="why__label">RUNTIMES · Node · Bun · Deno</span></div>
-<div class="why__layer why__layer--api"><span class="why__label">TYPES · TypeScript · Zod</span></div>
-<div class="why__layer why__layer--agent"><span class="why__label">FRAMEWORKS · Hono · Express · Fastify</span></div>
-<div class="why__layer why__layer--tools"><span class="why__label">DELIVERY · npx · the registry · single binaries</span></div>
+<div class="why__layer why__layer--ui" v-click><span class="why__label">RUNTIMES · Node · Bun · Deno</span></div>
+<div class="why__layer why__layer--api" v-click><span class="why__label">TYPES · TypeScript · Zod</span></div>
+<div class="why__layer why__layer--agent" v-click><span class="why__label">FRAMEWORKS · Hono · Express · Fastify</span></div>
+<div class="why__layer why__layer--tools" v-click><span class="why__label">DELIVERY · npx · the registry · single binaries</span></div>
 </div>
 </div>
 </div>
