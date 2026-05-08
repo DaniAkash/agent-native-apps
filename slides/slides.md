@@ -435,7 +435,7 @@ class: light-slide
 import { Command } from 'commander'
 
 const program = new Command()
-  .name('myapp')
+  .name('ship')
   .description('Ship and inspect deployments')
 ```
 
@@ -461,8 +461,8 @@ program
 <span class="build__step-label">3. publish + run</span>
 
 ```bash
-$ npx myapp deploy feat/login --region=fra1
-https://feat-login.preview.myapp.dev
+$ npx ship deploy feat/login --region=fra1
+https://feat-login.preview.shipped.dev
 ```
 
 </div>
