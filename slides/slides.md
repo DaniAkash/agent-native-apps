@@ -493,20 +493,23 @@ class: light-slide
 <div class="sub__body">
 <p class="sub__lead">A well-typed API is the highest-leverage thing you can ship for agents you don't control.</p>
 <div class="sub__grid">
-<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">Other people's code calls you.</div><p class="card-body">A typed schema = correct code generation in any language, on the first try.</p></div>
-<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">You're building infra.</div><p class="card-body">Devtools that get embedded into other software live or die by their API spec.</p></div>
-<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">Reliability matters.</div><p class="card-body">OpenAPI / gRPC / GraphQL = the agent gets the contract before it writes the call.</p></div>
+<div class="card" v-click><div class="card-eyebrow">Wins when</div><div class="card-title">Other people's code calls you.</div><p class="card-body">A typed schema = correct code generation in any language, on the first try.</p></div>
+<div class="card" v-click><div class="card-eyebrow">Wins when</div><div class="card-title">You're building infra.</div><p class="card-body">Devtools that get embedded into other software live or die by their API spec.</p></div>
+<div class="card" v-click><div class="card-eyebrow">Wins when</div><div class="card-title">Reliability matters.</div><p class="card-body">OpenAPI / gRPC / GraphQL = the agent gets the contract before it writes the call.</p></div>
 </div>
 </div>
 </div>
 
 <style scoped>
-.sub { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 24px; }
-.sub__head { display: flex; align-items: center; gap: 28px; }
-.sub__num { font-family: "Fraunces", Georgia, serif; font-style: italic; font-weight: 500; font-size: 96px; line-height: 1; color: #7c3aed; letter-spacing: -0.02em; }
-.sub__title { font-size: 80px; line-height: 1.0; margin: 8px 0 0 0; letter-spacing: -0.02em; }
-.sub__lead { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 22px; color: #281950; margin: 0 0 12px 0; }
-.sub__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.sub { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 18px; padding: 24px 0; }
+.sub__head { display: flex; align-items: center; gap: 24px; }
+.sub__num { font-family: "Fraunces", Georgia, serif; font-style: italic; font-weight: 500; font-size: 72px; line-height: 1; color: #7c3aed; letter-spacing: -0.02em; }
+.sub__title { font-size: 64px; line-height: 1.0; margin: 6px 0 0 0; letter-spacing: -0.02em; }
+.sub__lead { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 20px; color: #281950; margin: 0 0 8px 0; }
+.sub__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.sub__grid .card { padding: 22px 22px; }
+.sub__grid .card-title { font-size: 22px; line-height: 1.15; }
+.sub__grid .card-body { font-size: 14px; line-height: 1.45; }
 </style>
 
 ---
