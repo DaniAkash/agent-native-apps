@@ -1,6 +1,6 @@
 <template>
   <div class="dt">
-    <div class="dt__col" v-for="(item, i) in items" :key="i">
+    <div class="dt__col" v-for="(item, i) in items" :key="i" v-click>
       <div class="dt__name">
         <span class="dt__sq" :style="{ background: item.color }" />
         {{ item.name }}
