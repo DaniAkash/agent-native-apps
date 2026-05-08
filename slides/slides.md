@@ -524,11 +524,11 @@ class: light-slide
 <h2>Typed APIs are <em>almost free</em> in JS.</h2>
 <p class="build__lede">Schemas at the door, types at the call site. Pick your shape.</p>
 <div class="build__list">
-<div class="build__row"><span class="build__name">Hono RPC</span><span class="build__desc">End-to-end types between server and client.</span></div>
-<div class="build__row"><span class="build__name">Zod OpenAPI · Hono</span><span class="build__desc">One Zod schema → validated input + OpenAPI spec.</span></div>
-<div class="build__row"><span class="build__name">create-t3-app</span><span class="build__desc">Next + tRPC + Zod, ready to ship.</span></div>
-<div class="build__row"><span class="build__name">Connect RPC</span><span class="build__desc">Protobuf-typed RPC, browser- and gRPC-compatible.</span></div>
-<div class="build__row"><span class="build__name">GraphQL Yoga</span><span class="build__desc">Schema-first GraphQL with batteries included.</span></div>
+<div class="build__row" v-click><span class="build__name">Hono RPC</span><span class="build__desc">End-to-end types between server and client.</span></div>
+<div class="build__row" v-click><span class="build__name">Zod OpenAPI · Hono</span><span class="build__desc">One Zod schema → validated input + OpenAPI spec.</span></div>
+<div class="build__row" v-click><span class="build__name">create-t3-app</span><span class="build__desc">Next + tRPC + Zod, ready to ship.</span></div>
+<div class="build__row" v-click><span class="build__name">Connect RPC</span><span class="build__desc">Protobuf-typed RPC, browser- and gRPC-compatible.</span></div>
+<div class="build__row" v-click><span class="build__name">GraphQL Yoga</span><span class="build__desc">Schema-first GraphQL with batteries included.</span></div>
 </div>
 </div>
 
