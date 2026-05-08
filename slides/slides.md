@@ -552,10 +552,10 @@ class: light-slide
 
 <div class="build">
 <span class="eyebrow">how it works</span>
-<h2>Zod + Hono, one OpenAPI spec for free.</h2>
+<h2>One Zod schema, one <em>typed</em> Hono route.</h2>
 
 <div class="build__step" v-click>
-<span class="build__step-label">1. one Zod schema, the source of truth</span>
+<span class="build__step-label">1. define the schema once</span>
 
 ```ts
 const Invoice = z.object({
@@ -583,8 +583,33 @@ app.openapi(createRoute({
 
 </div>
 
+<p class="build__pin" v-click>Same Zod schema: validated input at runtime, inferred types at compile time. Two jobs, one definition.</p>
+</div>
+
+<style scoped>
+.build { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 10px; padding: 24px 0; }
+.build h2 { font-size: 30px; line-height: 1.1; margin: 0 0 4px 0; }
+.build h2 em { font-style: italic; color: #7c3aed; }
+.build__step { display: flex; flex-direction: column; gap: 4px; }
+.build__step-label { font-family: "Bricolage Grotesque", sans-serif; font-size: 11px; font-weight: 575; letter-spacing: 0.18em; text-transform: uppercase; color: #7c3aed; }
+.build__pin { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 16px; line-height: 1.4; color: #5e537c; margin: 6px 0 0 0; }
+.build :deep(pre) { padding: 14px 18px !important; margin: 0 !important; }
+.build :deep(pre code) { font-size: 13px !important; line-height: 1.5 !important; }
+</style>
+
+---
+layout: default
+class: light-slide
+---
+
+<SoftHaze />
+
+<div class="build">
+<span class="eyebrow">the payoff</span>
+<h2>Then Hono ships your <em>OpenAPI spec</em> for free.</h2>
+
 <div class="build__step" v-click>
-<span class="build__step-label">3. and the spec generates itself</span>
+<span class="build__step-label">1. mount the spec endpoint</span>
 
 ```ts
 app.doc('/openapi.json', {
@@ -595,12 +620,34 @@ app.doc('/openapi.json', {
 
 </div>
 
-<p class="build__pin" v-click>Same Zod schema: validated input, inferred types, machine-readable spec. Three jobs, one definition.</p>
+<div class="build__step" v-click>
+<span class="build__step-label">2. and this is what gets served</span>
+
+```json
+{
+  "openapi": "3.0.0",
+  "info":    { "title": "Shipping API", "version": "1.0" },
+  "paths": {
+    "/invoices": {
+      "post": {
+        "requestBody": { "content": { "application/json": {
+          "schema": { "$ref": "#/components/schemas/Invoice" }
+        }}},
+        "responses": { "200": { "$ref": "#/components/responses/InvoiceCreated" } }
+      }
+    }
+  }
+}
+```
+
+</div>
+
+<p class="build__pin" v-click>No hand-written spec. The schema, the validator, and the public contract never drift, because there's only one source.</p>
 </div>
 
 <style scoped>
 .build { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 8px 0 32px; }
-.build h2 { font-size: 26px; line-height: 1.1; margin: 0 0 2px 0; }
+.build h2 { font-size: 28px; line-height: 1.1; margin: 0 0 2px 0; }
 .build h2 em { font-style: italic; color: #7c3aed; }
 .build__step { display: flex; flex-direction: column; gap: 2px; }
 .build__step-label { font-family: "Bricolage Grotesque", sans-serif; font-size: 10px; font-weight: 575; letter-spacing: 0.18em; text-transform: uppercase; color: #7c3aed; }
