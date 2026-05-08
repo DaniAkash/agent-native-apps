@@ -810,6 +810,202 @@ class: light-slide
 
 <SoftHaze />
 
+<div class="case">
+<div class="case__head">
+<span class="case__brand">GITHUB COPILOT</span>
+<h2 class="case__title">From <em>40 tools</em> down to <em>13.</em></h2>
+</div>
+<div class="case__body">
+<div class="case__col">
+<span class="case__col-label">what changed</span>
+<ul class="case__list">
+<li v-click><strong>Merged atomic reads</strong> into one. Eight <code>get_*</code> calls became one <code>search</code>.</li>
+<li v-click><strong>Outcome-shaped tools.</strong> "Open a PR with these changes" replaced six setup steps.</li>
+<li v-click><strong>Dynamic toolsets.</strong> Tools load only when the repo or context calls for them.</li>
+<li v-click><strong>Imperative descriptions.</strong> Every line rewritten until Claude Code itself stopped misusing them.</li>
+</ul>
+</div>
+<div class="case__col case__col--result" v-click>
+<span class="case__col-label">the result</span>
+<div class="case__num">+2–5 pt</div>
+<div class="case__num-label">benchmark accuracy</div>
+<div class="case__num case__num--alt">−400 ms</div>
+<div class="case__num-label">tool-call latency</div>
+</div>
+</div>
+</div>
+
+<style scoped>
+.case { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; height: 100%; gap: 22px; padding: 24px 0; }
+.case__head { display: flex; flex-direction: column; gap: 6px; }
+.case__brand { font-family: "Bricolage Grotesque", sans-serif; font-size: 11px; font-weight: 575; letter-spacing: 0.22em; color: #7c3aed; }
+.case__title { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 44px; line-height: 1.05; letter-spacing: -0.02em; color: #281950; margin: 0; }
+.case__title em { font-style: italic; color: #7c3aed; }
+.case__body { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
+.case__col { background: #ffffff; border-radius: 16px; padding: 24px 26px; box-shadow: rgba(32, 34, 55, 0.075) 0px 0px 0px 1px, rgba(32, 34, 55, 0.05) 0px 10px 15px -3px; }
+.case__col-label { font-family: "Bricolage Grotesque", sans-serif; font-size: 10px; font-weight: 575; letter-spacing: 0.18em; text-transform: uppercase; color: #7c3aed; }
+.case__list { list-style: none; padding: 0; margin: 14px 0 0 0; display: flex; flex-direction: column; gap: 10px; }
+.case__list li { font-family: "Bricolage Grotesque", sans-serif; font-size: 15px; line-height: 1.5; color: #5e537c; padding-left: 18px; position: relative; }
+.case__list li::before { content: ""; position: absolute; left: 0; top: 0.7em; width: 6px; height: 6px; border-radius: 50%; background: #7c3aed; }
+.case__list strong { color: #281950; font-weight: 575; }
+.case__col--result { display: flex; flex-direction: column; justify-content: center; gap: 4px; background: linear-gradient(135deg, rgba(125, 211, 252, 0.18), rgba(249, 168, 212, 0.18)); }
+.case__num { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 56px; line-height: 1; letter-spacing: -0.025em; color: #281950; margin-top: 14px; }
+.case__num--alt { color: #7c3aed; font-style: italic; }
+.case__num-label { font-family: "Bricolage Grotesque", sans-serif; font-size: 13px; font-weight: 575; letter-spacing: 0.05em; color: #5e537c; }
+</style>
+
+---
+layout: default
+class: light-slide
+---
+
+<SoftHaze />
+
+<div class="case">
+<div class="case__head">
+<span class="case__brand">BLOCK · LINEAR MCP</span>
+<h2 class="case__title">Same surface. <em>Two doors.</em></h2>
+</div>
+<div class="ba">
+<div class="ba__col ba__col--before">
+<span class="ba__label">before · ~30 atomic tools</span>
+<div class="ba__chips">
+<span class="ba__chip" v-click>issue.create</span>
+<span class="ba__chip" v-click>issue.list</span>
+<span class="ba__chip" v-click>issue.update</span>
+<span class="ba__chip" v-click>issue.archive</span>
+<span class="ba__chip" v-click>comment.create</span>
+<span class="ba__chip" v-click>project.list</span>
+<span class="ba__chip" v-click>project.get</span>
+<span class="ba__chip" v-click>team.list</span>
+<span class="ba__chip" v-click>label.list</span>
+<span class="ba__chip" v-click>cycle.get</span>
+<span class="ba__chip ba__chip--ghost">+20 more…</span>
+</div>
+</div>
+<div class="ba__arrow">→</div>
+<div class="ba__col ba__col--after">
+<span class="ba__label">after · two tools</span>
+<div class="ba__chips ba__chips--big">
+<span class="ba__chip ba__chip--big" v-click>search(query)</span>
+<span class="ba__chip ba__chip--big" v-click>execute(graphql)</span>
+</div>
+<p class="ba__note" v-click>The agent describes intent. <code>search</code> finds relevant entities. <code>execute</code> runs the actual GraphQL.</p>
+</div>
+</div>
+</div>
+
+<style scoped>
+.case { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; height: 100%; gap: 22px; padding: 24px 0; }
+.case__head { display: flex; flex-direction: column; gap: 6px; }
+.case__brand { font-family: "Bricolage Grotesque", sans-serif; font-size: 11px; font-weight: 575; letter-spacing: 0.22em; color: #7c3aed; }
+.case__title { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 48px; line-height: 1.05; letter-spacing: -0.02em; color: #281950; margin: 0; }
+.case__title em { font-style: italic; color: #7c3aed; }
+.ba { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: stretch; }
+.ba__col { background: #ffffff; border-radius: 16px; padding: 22px 24px; box-shadow: rgba(32, 34, 55, 0.075) 0px 0px 0px 1px, rgba(32, 34, 55, 0.05) 0px 10px 15px -3px; display: flex; flex-direction: column; gap: 14px; }
+.ba__col--after { background: linear-gradient(135deg, rgba(125, 211, 252, 0.18), rgba(249, 168, 212, 0.18)); }
+.ba__label { font-family: "Bricolage Grotesque", sans-serif; font-size: 10px; font-weight: 575; letter-spacing: 0.18em; text-transform: uppercase; color: #7c3aed; }
+.ba__chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.ba__chips--big { gap: 12px; flex-direction: column; }
+.ba__chip { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 12px; padding: 6px 12px; border-radius: 9999px; background: #f1f2f9; color: #281950; border: 1px solid #e7e6f4; }
+.ba__chip--ghost { color: #a39ac1; background: transparent; border-style: dashed; font-style: italic; }
+.ba__chip--big { font-size: 16px; padding: 12px 18px; background: #ffffff; color: #7c3aed; font-weight: 700; box-shadow: rgba(91, 33, 182, 0.12) 0px 6px 12px -4px; align-self: flex-start; }
+.ba__arrow { font-family: "Fraunces", Georgia, serif; font-size: 36px; color: #7c3aed; align-self: center; }
+.ba__note { font-family: "Bricolage Grotesque", sans-serif; font-size: 14px; color: #5e537c; line-height: 1.5; margin: 4px 0 0 0; }
+</style>
+
+---
+layout: default
+class: light-slide
+---
+
+<HeroGradient />
+
+<div class="cf">
+<span class="eyebrow" style="color: #281950;">CLOUDFLARE</span>
+<h2 class="cf__title">2,500 endpoints. <em>One context window.</em></h2>
+<p class="cf__sub" v-click>If every endpoint were a tool, the schema alone would be:</p>
+<div class="cf__big" v-click>
+<span class="cf__num">~1.17M</span>
+<span class="cf__unit">tokens</span>
+</div>
+<p class="cf__caption" v-click>before the user types <em>"hello."</em></p>
+<p class="cf__pin" v-click>No frontier model can fit it. Most can't fit a tenth of it.</p>
+</div>
+
+<style scoped>
+.cf { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; height: 100%; gap: 14px; max-width: 1100px; }
+.cf__title { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 56px; line-height: 1.05; letter-spacing: -0.025em; color: #281950; margin: 6px 0 12px 0; }
+.cf__title em { font-style: italic; color: #7c3aed; }
+.cf__sub { font-family: "Bricolage Grotesque", sans-serif; font-size: 20px; color: #281950; font-weight: 575; margin: 0; }
+.cf__big { display: flex; align-items: baseline; gap: 18px; margin: 8px 0; }
+.cf__num { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 144px; line-height: 1; letter-spacing: -0.04em; color: #7c3aed; font-style: italic; }
+.cf__unit { font-family: "Bricolage Grotesque", sans-serif; font-size: 22px; font-weight: 575; letter-spacing: 0.08em; text-transform: uppercase; color: #281950; }
+.cf__caption { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 22px; color: #281950; margin: 0; }
+.cf__caption em { color: #7c3aed; }
+.cf__pin { font-family: "Bricolage Grotesque", sans-serif; font-size: 16px; color: #281950; font-weight: 575; margin: 12px 0 0 0; }
+</style>
+
+---
+layout: default
+class: light-slide
+---
+
+<SoftHaze />
+
+<div class="cm">
+<span class="eyebrow">CODE MODE</span>
+<h2 class="cm__title">So Cloudflare exposed <em>two tools.</em></h2>
+<div class="cm__flow">
+<div class="cm__step cm__step--1" v-click>
+<span class="cm__step-num">01</span>
+<div class="cm__step-name"><code>search(query)</code></div>
+<p class="cm__step-desc">Runs JS over the OpenAPI spec. Finds the right endpoints. Returns small.</p>
+</div>
+<div class="cm__step cm__step--2" v-click>
+<span class="cm__step-num">02</span>
+<div class="cm__step-name"><code>execute(code)</code></div>
+<p class="cm__step-desc">Runs the agent's TypeScript against a typed SDK in a sandboxed Worker.</p>
+</div>
+</div>
+<div class="cm__result" v-click>
+<div class="cm__before"><span class="cm__before-num">~1.17M</span><span class="cm__before-label">tokens, naive</span></div>
+<div class="cm__arrow">→</div>
+<div class="cm__after"><span class="cm__after-num">~1,000</span><span class="cm__after-label">tokens, Code Mode</span></div>
+<div class="cm__pct" v-click>99.9% reduction. Full coverage.</div>
+</div>
+</div>
+
+<style scoped>
+.cm { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; height: 100%; gap: 18px; padding: 24px 0; }
+.cm__title { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 44px; line-height: 1.05; letter-spacing: -0.02em; color: #281950; margin: 4px 0 8px 0; }
+.cm__title em { font-style: italic; color: #7c3aed; }
+.cm__flow { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.cm__step { background: #ffffff; border-radius: 16px; padding: 22px 24px; box-shadow: rgba(32, 34, 55, 0.075) 0px 0px 0px 1px, rgba(32, 34, 55, 0.05) 0px 10px 15px -3px; display: flex; flex-direction: column; gap: 10px; position: relative; overflow: hidden; }
+.cm__step::before { content: ""; position: absolute; inset: 0; opacity: 0.18; pointer-events: none; }
+.cm__step--1::before { background: linear-gradient(120deg, rgba(125, 211, 252, 0.6), transparent 60%); }
+.cm__step--2::before { background: linear-gradient(120deg, rgba(249, 168, 212, 0.6), transparent 60%); }
+.cm__step-num { font-family: "Fraunces", Georgia, serif; font-style: italic; font-weight: 500; font-size: 32px; color: #7c3aed; position: relative; z-index: 1; }
+.cm__step-name { font-family: "JetBrains Mono", ui-monospace, monospace; font-size: 18px; font-weight: 700; color: #281950; position: relative; z-index: 1; }
+.cm__step-name code { background: transparent; padding: 0; color: inherit; font-family: inherit; }
+.cm__step-desc { font-family: "Bricolage Grotesque", sans-serif; font-size: 14px; line-height: 1.5; color: #5e537c; margin: 0; position: relative; z-index: 1; }
+.cm__result { display: grid; grid-template-columns: 1fr auto 1fr; gap: 18px; align-items: center; padding: 18px 24px; background: #ffffff; border-radius: 16px; box-shadow: rgba(32, 34, 55, 0.05) 0px 0px 0px 1px; }
+.cm__before, .cm__after { display: flex; flex-direction: column; gap: 2px; align-items: center; }
+.cm__before-num, .cm__after-num { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 36px; line-height: 1; letter-spacing: -0.02em; }
+.cm__before-num { color: #a39ac1; text-decoration: line-through; }
+.cm__after-num { color: #7c3aed; font-style: italic; }
+.cm__before-label, .cm__after-label { font-family: "Bricolage Grotesque", sans-serif; font-size: 11px; font-weight: 575; letter-spacing: 0.14em; text-transform: uppercase; color: #5e537c; }
+.cm__arrow { font-family: "Fraunces", Georgia, serif; font-size: 28px; color: #7c3aed; }
+.cm__pct { grid-column: 1 / -1; text-align: center; font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 16px; color: #281950; margin-top: 4px; }
+</style>
+
+---
+layout: default
+class: light-slide
+---
+
+<SoftHaze />
+
 <div class="patterns">
 <span class="eyebrow">what makes a tool good</span>
 <h2>Four habits that actually ship.</h2>
