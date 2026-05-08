@@ -400,11 +400,11 @@ class: light-slide
 <h2><em>npx</em> your way to a CLI.</h2>
 <p class="build__lede">npm already taught the world to run binaries by name. The agent ecosystem inherited it.</p>
 <div class="build__grid">
-<div class="card"><div class="card-eyebrow">oclif</div><div class="card-title">Salesforce-grade.</div><p class="card-body">Plugins, autocomplete, multi-command apps.</p></div>
-<div class="card"><div class="card-eyebrow">yargs</div><div class="card-title">Ergonomic default.</div><p class="card-body">Rich parsing, generated help, sane errors.</p></div>
-<div class="card"><div class="card-eyebrow">commander.js</div><div class="card-title">The minimalist.</div><p class="card-body">Tiny, declarative, no surprises.</p></div>
+<div class="card" v-click><div class="card-eyebrow">oclif</div><div class="card-title">Salesforce-grade.</div><p class="card-body">Plugins, autocomplete, multi-command apps.</p></div>
+<div class="card" v-click><div class="card-eyebrow">yargs</div><div class="card-title">Ergonomic default.</div><p class="card-body">Rich parsing, generated help, sane errors.</p></div>
+<div class="card" v-click><div class="card-eyebrow">commander.js</div><div class="card-title">The minimalist.</div><p class="card-body">Tiny, declarative, no surprises.</p></div>
 </div>
-<p class="build__pin">Bonus: a wave of new tools auto-convert MCP servers into CLIs for shell-equipped agents.</p>
+<p class="build__pin" v-click>Bonus: a wave of new tools auto-convert MCP servers into CLIs for shell-equipped agents.</p>
 </div>
 
 <style scoped>
