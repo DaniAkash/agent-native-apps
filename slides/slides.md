@@ -424,6 +424,67 @@ class: light-slide
 
 <SoftHaze />
 
+<div class="build">
+<span class="eyebrow">build it in JS</span>
+<h2>A CLI is even <em>shorter.</em></h2>
+
+<div class="build__step" v-click>
+<span class="build__step-label">1. start the program</span>
+
+```ts
+import { Command } from 'commander'
+
+const program = new Command()
+  .name('invoices')
+  .description('Send and manage invoices')
+```
+
+</div>
+
+<div class="build__step" v-click>
+<span class="build__step-label">2. define a command</span>
+
+```ts
+program
+  .command('send <customer> <amount>')
+  .description('Send an invoice')
+  .action(async (customer, amount) => {
+    await invoices.send({ customer, amount: Number(amount) })
+  })
+```
+
+</div>
+
+<div class="build__step" v-click>
+<span class="build__step-label">3. publish + run</span>
+
+```bash
+$ npx invoices send acme 200
+```
+
+</div>
+
+<p class="build__pin" v-click>The same handler. Now an agent with a shell, or a human at one, can drive your app.</p>
+</div>
+
+<style scoped>
+.build { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 8px 0 32px; }
+.build h2 { font-size: 28px; line-height: 1.1; margin: 0 0 2px 0; }
+.build h2 em { font-style: italic; color: #7c3aed; }
+.build__step { display: flex; flex-direction: column; gap: 2px; }
+.build__step-label { font-family: "Bricolage Grotesque", sans-serif; font-size: 10px; font-weight: 575; letter-spacing: 0.18em; text-transform: uppercase; color: #7c3aed; }
+.build__pin { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 14px; line-height: 1.4; color: #5e537c; margin: 2px 0 0 0; }
+.build :deep(pre) { padding: 10px 16px !important; margin: 0 !important; }
+.build :deep(pre code) { font-size: 11.5px !important; line-height: 1.4 !important; }
+</style>
+
+---
+layout: default
+class: light-slide
+---
+
+<SoftHaze />
+
 <div class="sub">
 <div class="sub__head"><div class="sub__num">03</div><div><span class="eyebrow">substrate three</span><h2 class="sub__title">API.</h2></div></div>
 <div class="sub__body">
