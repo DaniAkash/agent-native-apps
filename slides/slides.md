@@ -284,9 +284,9 @@ class: light-slide
 <div class="sub__body">
 <p class="sub__lead">A protocol for agents to discover and call your tools, over JSON-RPC.</p>
 <div class="sub__grid">
-<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">You ship to many clients.</div><p class="card-body">Claude, ChatGPT, Cursor, Copilot. Write the server once, every MCP client gets it.</p></div>
-<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">Auth has to survive.</div><p class="card-body">OAuth 2.1 with PKCE, scoped tokens, audience-bound. Refresh handled for you.</p></div>
-<div class="card"><div class="card-eyebrow">Wins when</div><div class="card-title">Output must be typed.</div><p class="card-body">Structured tool outputs and resource links. Parseable, not just printable.</p></div>
+<div class="card" v-click><div class="card-eyebrow">Wins when</div><div class="card-title">You ship to many clients.</div><p class="card-body">Claude, ChatGPT, Cursor, Copilot. Write the server once, every MCP client gets it.</p></div>
+<div class="card" v-click><div class="card-eyebrow">Wins when</div><div class="card-title">Auth has to survive.</div><p class="card-body">OAuth 2.1 with PKCE, scoped tokens, audience-bound. Refresh handled for you.</p></div>
+<div class="card" v-click><div class="card-eyebrow">Wins when</div><div class="card-title">Output must be typed.</div><p class="card-body">Structured tool outputs and resource links. Parseable, not just printable.</p></div>
 </div>
 </div>
 </div>
