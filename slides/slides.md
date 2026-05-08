@@ -787,11 +787,11 @@ class: light-slide
 <span class="eyebrow" style="color: #281950;">what production teams learned</span>
 <h2>The tool-count cliff is <em>real.</em></h2>
 <div class="cliff__grid">
-<StatCard num="40 → 13" label="GitHub Copilot's MCP toolset, after a curation pass." source="2-5pt benchmark gain · 400ms latency win" />
-<StatCard num="30 → 2" label="Block's Linear MCP, rebuilt three times." source="ended at: search · execute" />
-<StatCard num="2,500 → 2" label="Cloudflare's full API surface, via Code Mode." source="~1,000 tokens of context · 99.9% reduction" />
+<StatCard v-click num="40 → 13" label="GitHub Copilot's MCP toolset, after a curation pass." source="2-5pt benchmark gain · 400ms latency win" />
+<StatCard v-click num="30 → 2" label="Block's Linear MCP, rebuilt three times." source="ended at: search · execute" />
+<StatCard v-click num="2,500 → 2" label="Cloudflare's full API surface, via Code Mode." source="~1,000 tokens of context · 99.9% reduction" />
 </div>
-<p class="cliff__pin">Past ~20–30 tools, accuracy collapses non-linearly. Curate ruthlessly. Or expose two tools: <em>search</em> and <em>execute.</em></p>
+<p class="cliff__pin" v-click>Past ~20–30 tools, accuracy collapses non-linearly. Curate ruthlessly. Or expose two tools: <em>search</em> and <em>execute.</em></p>
 </div>
 
 <style scoped>
@@ -814,10 +814,10 @@ class: light-slide
 <span class="eyebrow">what makes a tool good</span>
 <h2>Four habits that actually ship.</h2>
 <div class="patterns__grid">
-<div class="card"><div class="card-eyebrow">01</div><div class="card-title">Outcome-oriented tools.</div><p class="card-body">"Close the ticket with evidence." Not <code>tickets.update</code>.</p></div>
-<div class="card"><div class="card-eyebrow">02</div><div class="card-title">Structured outputs.</div><p class="card-body">JSON Schema in. JSON Schema out. No guessing.</p></div>
-<div class="card"><div class="card-eyebrow">03</div><div class="card-title">Idempotency keys.</div><p class="card-body">Agents retry. Without a key, they double-charge.</p></div>
-<div class="card"><div class="card-eyebrow">04</div><div class="card-title">Executable errors.</div><p class="card-body">Missing scope. Conflict id. Next step. Make failure actionable.</p></div>
+<div class="card" v-click><div class="card-eyebrow">01</div><div class="card-title">Outcome-oriented tools.</div><p class="card-body">"Close the ticket with evidence." Not <code>tickets.update</code>.</p></div>
+<div class="card" v-click><div class="card-eyebrow">02</div><div class="card-title">Structured outputs.</div><p class="card-body">JSON Schema in. JSON Schema out. No guessing.</p></div>
+<div class="card" v-click><div class="card-eyebrow">03</div><div class="card-title">Idempotency keys.</div><p class="card-body">Agents retry. Without a key, they double-charge.</p></div>
+<div class="card" v-click><div class="card-eyebrow">04</div><div class="card-title">Executable errors.</div><p class="card-body">Missing scope. Conflict id. Next step. Make failure actionable.</p></div>
 </div>
 </div>
 
