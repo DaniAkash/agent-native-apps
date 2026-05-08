@@ -719,6 +719,68 @@ layout: default
 class: light-slide
 ---
 
+<SoftHaze />
+
+<div class="pivot">
+<span class="eyebrow">act V</span>
+<p class="pivot__title">Building it is the easy part.</p>
+<p class="pivot__title pivot__title--accent" v-click>Designing it for an <em>agent</em> is the hard one.</p>
+<p class="pivot__sub" v-click>Here's what production teams learned, the slow way.</p>
+</div>
+
+<style scoped>
+.pivot { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; height: 100%; gap: 18px; max-width: 1100px; }
+.pivot__title { font-family: "Fraunces", Georgia, serif; font-weight: 500; font-size: 64px; line-height: 1.05; letter-spacing: -0.03em; color: #281950; margin: 0; }
+.pivot__title em { font-style: italic; color: #7c3aed; }
+.pivot__title--accent { color: #281950; }
+.pivot__sub { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 22px; color: #5e537c; margin: 16px 0 0 0; }
+</style>
+
+---
+layout: default
+class: light-slide
+---
+
+<SoftHaze />
+
+<div class="problems">
+<span class="eyebrow">three things break at scale</span>
+<h2>The same mistakes, every team.</h2>
+<div class="problems__grid">
+<div class="card" v-click>
+<div class="card-eyebrow">01 · context tax</div>
+<div class="card-title">Schemas eat the prompt.</div>
+<p class="card-body">Five connected MCPs can spend ~55K tokens describing tools before the user types a word. The agent pays for surface area you never use.</p>
+</div>
+<div class="card" v-click>
+<div class="card-eyebrow">02 · selection collapse</div>
+<div class="card-title">Too many tools, no clear pick.</div>
+<p class="card-body">Past ~20–30 tools, accuracy drops non-linearly. The agent guesses. Then it guesses wrong. Then it retries.</p>
+</div>
+<div class="card" v-click>
+<div class="card-eyebrow">03 · REST shape</div>
+<div class="card-title">CRUD ≠ a goal.</div>
+<p class="card-body">An agent wants <em>"close the ticket with evidence"</em>, not <code>tickets.update</code>. Atomic endpoints force the agent to plan around your data model.</p>
+</div>
+</div>
+</div>
+
+<style scoped>
+.problems { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: center; height: 100%; gap: 22px; padding: 24px 0; }
+.problems h2 { font-size: 44px; line-height: 1.05; margin: 4px 0 0 0; }
+.problems__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.problems__grid .card { padding: 24px 22px; }
+.problems__grid .card-title { font-size: 22px; line-height: 1.15; }
+.problems__grid .card-body { font-size: 14px; line-height: 1.5; }
+.problems__grid .card-body code { font-size: 0.85em; }
+.problems__grid .card-body em { font-style: italic; color: #7c3aed; }
+</style>
+
+---
+layout: default
+class: light-slide
+---
+
 <HeroGradient />
 
 <div class="cliff">
