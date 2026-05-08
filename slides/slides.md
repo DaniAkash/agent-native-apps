@@ -350,14 +350,14 @@ const app = new Hono().route('/mcp', mcp.handler())
 </div>
 
 <style scoped>
-.build { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 24px 0; }
-.build h2 { font-size: 32px; line-height: 1.1; margin: 0 0 4px 0; }
+.build { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 8px 0 32px; }
+.build h2 { font-size: 28px; line-height: 1.1; margin: 0 0 2px 0; }
 .build h2 em { font-style: italic; color: #7c3aed; }
-.build__step { display: flex; flex-direction: column; gap: 4px; }
-.build__step-label { font-family: "Bricolage Grotesque", sans-serif; font-size: 11px; font-weight: 575; letter-spacing: 0.18em; text-transform: uppercase; color: #7c3aed; }
-.build__pin { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 15px; color: #5e537c; margin: 4px 0 0 0; }
-.build :deep(pre) { padding: 12px 18px !important; margin: 0 !important; }
-.build :deep(pre code) { font-size: 12.5px !important; line-height: 1.45 !important; }
+.build__step { display: flex; flex-direction: column; gap: 2px; }
+.build__step-label { font-family: "Bricolage Grotesque", sans-serif; font-size: 10px; font-weight: 575; letter-spacing: 0.18em; text-transform: uppercase; color: #7c3aed; }
+.build__pin { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 14px; line-height: 1.4; color: #5e537c; margin: 2px 0 0 0; }
+.build :deep(pre) { padding: 10px 16px !important; margin: 0 !important; }
+.build :deep(pre code) { font-size: 11.5px !important; line-height: 1.4 !important; }
 </style>
 
 ---
