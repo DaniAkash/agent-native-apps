@@ -311,32 +311,53 @@ class: light-slide
 <span class="eyebrow">build it in JS</span>
 <h2>An MCP server is just a <em>middleware.</em></h2>
 
+<div class="build__step" v-click>
+<span class="build__step-label">1. spin up the server</span>
+
 ```ts
 import { Hono } from 'hono'
 import { McpServer } from '@hono/mcp'
 
 const mcp = new McpServer({ name: 'my-app', version: '1.0.0' })
+```
 
+</div>
+
+<div class="build__step" v-click>
+<span class="build__step-label">2. expose a tool</span>
+
+```ts
 mcp.tool(
   'create_invoice',
   'Send an invoice to a customer.',
   { customerId: z.string(), amount: z.number() },
   async ({ customerId, amount }) => invoices.send({ customerId, amount }),
 )
+```
 
+</div>
+
+<div class="build__step" v-click>
+<span class="build__step-label">3. mount and ship</span>
+
+```ts
 const app = new Hono().route('/mcp', mcp.handler())
 ```
 
-<p class="build__pin">Tools are functions. Descriptions are docstrings. Auth is a middleware. Same shape as a REST handler. Different interface for a different reader.</p>
+</div>
+
+<p class="build__pin" v-click>Tools are functions. Descriptions are docstrings. Auth is a middleware. Same shape as a REST handler. Different interface for a different reader.</p>
 </div>
 
 <style scoped>
-.build { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 12px; padding: 32px 0; }
-.build h2 { font-size: 38px; line-height: 1.1; margin: 4px 0 0 0; }
+.build { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 8px; padding: 24px 0; }
+.build h2 { font-size: 32px; line-height: 1.1; margin: 0 0 4px 0; }
 .build h2 em { font-style: italic; color: #7c3aed; }
-.build__pin { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 16px; color: #5e537c; margin: 4px 0 0 0; }
-.build :deep(pre) { padding: 16px 20px !important; margin: 0 !important; }
-.build :deep(pre code) { font-size: 13px !important; line-height: 1.5 !important; }
+.build__step { display: flex; flex-direction: column; gap: 4px; }
+.build__step-label { font-family: "Bricolage Grotesque", sans-serif; font-size: 11px; font-weight: 575; letter-spacing: 0.18em; text-transform: uppercase; color: #7c3aed; }
+.build__pin { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 15px; color: #5e537c; margin: 4px 0 0 0; }
+.build :deep(pre) { padding: 12px 18px !important; margin: 0 !important; }
+.build :deep(pre code) { font-size: 12.5px !important; line-height: 1.45 !important; }
 </style>
 
 ---
