@@ -548,6 +548,130 @@ layout: default
 class: light-slide
 ---
 
+<SoftHaze />
+
+<div class="build">
+<span class="eyebrow">how it works</span>
+<h2>Zod + Hono, one OpenAPI spec for free.</h2>
+
+<div class="build__step" v-click>
+<span class="build__step-label">1. one Zod schema, the source of truth</span>
+
+```ts
+const Invoice = z.object({
+  customerId: z.string(),
+  amount: z.number(),
+})
+```
+
+</div>
+
+<div class="build__step" v-click>
+<span class="build__step-label">2. plug it into a typed Hono route</span>
+
+```ts
+app.openapi(createRoute({
+  method: 'post',
+  path: '/invoices',
+  request:   { body: jsonContent(Invoice) },
+  responses: { 200: jsonContent(InvoiceCreated) },
+}), async (c) => {
+  const data = c.req.valid('json')        // fully typed
+  return c.json(await invoices.send(data))
+})
+```
+
+</div>
+
+<div class="build__step" v-click>
+<span class="build__step-label">3. and the spec generates itself</span>
+
+```ts
+app.doc('/openapi.json', {
+  openapi: '3.0.0',
+  info: { title: 'Shipping API', version: '1.0' },
+})
+```
+
+</div>
+
+<p class="build__pin" v-click>Same Zod schema: validated input, inferred types, machine-readable spec. Three jobs, one definition.</p>
+</div>
+
+<style scoped>
+.build { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 8px 0 32px; }
+.build h2 { font-size: 26px; line-height: 1.1; margin: 0 0 2px 0; }
+.build h2 em { font-style: italic; color: #7c3aed; }
+.build__step { display: flex; flex-direction: column; gap: 2px; }
+.build__step-label { font-family: "Bricolage Grotesque", sans-serif; font-size: 10px; font-weight: 575; letter-spacing: 0.18em; text-transform: uppercase; color: #7c3aed; }
+.build__pin { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 14px; line-height: 1.4; color: #5e537c; margin: 2px 0 0 0; }
+.build :deep(pre) { padding: 10px 16px !important; margin: 0 !important; }
+.build :deep(pre code) { font-size: 11.5px !important; line-height: 1.4 !important; }
+</style>
+
+---
+layout: default
+class: light-slide
+---
+
+<SoftHaze />
+
+<div class="build">
+<span class="eyebrow">on the other side</span>
+<h2>That spec becomes a <em>typesafe client</em> for free.</h2>
+
+<div class="build__step" v-click>
+<span class="build__step-label">1. generate types from the spec</span>
+
+```bash
+$ npx openapi-typescript https://api.shipped.dev/openapi.json -o api.d.ts
+```
+
+</div>
+
+<div class="build__step" v-click>
+<span class="build__step-label">2. wrap it in openapi-fetch</span>
+
+```ts
+import createClient from 'openapi-fetch'
+import type { paths } from './api'
+
+const api = createClient<paths>({ baseUrl: 'https://api.shipped.dev' })
+```
+
+</div>
+
+<div class="build__step" v-click>
+<span class="build__step-label">3. every call is typed end-to-end</span>
+
+```ts
+const { data, error } = await api.POST('/invoices', {
+  body: { customerId: 'cus_123', amount: 200 },
+})
+// wrong path → type error.  wrong body → type error.  no docs needed.
+```
+
+</div>
+
+<p class="build__pin" v-click>The coding agent gets autocomplete, validation, and inline types straight from your server. No prompt engineering, no docs scraping.</p>
+</div>
+
+<style scoped>
+.build { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 8px 0 32px; }
+.build h2 { font-size: 26px; line-height: 1.1; margin: 0 0 2px 0; }
+.build h2 em { font-style: italic; color: #7c3aed; }
+.build__step { display: flex; flex-direction: column; gap: 2px; }
+.build__step-label { font-family: "Bricolage Grotesque", sans-serif; font-size: 10px; font-weight: 575; letter-spacing: 0.18em; text-transform: uppercase; color: #7c3aed; }
+.build__pin { font-family: "Fraunces", Georgia, serif; font-style: italic; font-size: 14px; line-height: 1.4; color: #5e537c; margin: 2px 0 0 0; }
+.build :deep(pre) { padding: 10px 16px !important; margin: 0 !important; }
+.build :deep(pre code) { font-size: 11.5px !important; line-height: 1.4 !important; }
+</style>
+
+---
+layout: default
+class: light-slide
+---
+
 <HeroGradient />
 
 <div class="cliff">
