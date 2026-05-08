@@ -435,8 +435,8 @@ class: light-slide
 import { Command } from 'commander'
 
 const program = new Command()
-  .name('invoices')
-  .description('Send and manage invoices')
+  .name('myapp')
+  .description('Ship and inspect deployments')
 ```
 
 </div>
@@ -446,10 +446,12 @@ const program = new Command()
 
 ```ts
 program
-  .command('send <customer> <amount>')
-  .description('Send an invoice')
-  .action(async (customer, amount) => {
-    await invoices.send({ customer, amount: Number(amount) })
+  .command('deploy <branch>')
+  .description('Spin up a preview for a branch')
+  .option('--region <region>', 'target region', 'iad1')
+  .action(async (branch, opts) => {
+    const url = await deployments.preview(branch, opts)
+    console.log(url)
   })
 ```
 
@@ -459,12 +461,13 @@ program
 <span class="build__step-label">3. publish + run</span>
 
 ```bash
-$ npx invoices send acme 200
+$ npx myapp deploy feat/login --region=fra1
+https://feat-login.preview.myapp.dev
 ```
 
 </div>
 
-<p class="build__pin" v-click>The same handler. Now an agent with a shell, or a human at one, can drive your app.</p>
+<p class="build__pin" v-click>Now Claude Code or Codex can ship your branch from the same shell it runs <code>git push</code> in.</p>
 </div>
 
 <style scoped>
