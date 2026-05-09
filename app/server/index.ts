@@ -4,11 +4,17 @@ import { serveStatic } from 'hono/bun'
 import { logger } from 'hono/logger'
 import { cors } from 'hono/cors'
 import invoices from './routes/invoices'
+import { mcpHandler } from './mcp'
 
 const app = new OpenAPIHono()
 
 app.use('*', logger())
 app.use('/api/*', cors())
+app.use('/mcp', cors())
+
+// MCP lives outside the OpenAPI tree on purpose. It has its own discovery
+// protocol and shouldn't appear in the public REST spec.
+app.all('/mcp', mcpHandler)
 
 const api = new OpenAPIHono()
 api.route('/invoices', invoices)
@@ -51,4 +57,5 @@ if (!isProd) {
   console.log(`API listening on http://localhost:${port}`)
   console.log(`  • OpenAPI spec  http://localhost:${port}/api/openapi.json`)
   console.log(`  • API docs      http://localhost:${port}/api/docs`)
+  console.log(`  • MCP endpoint  http://localhost:${port}/mcp`)
 }
