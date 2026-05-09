@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors — Fly.io-inspired (see ../design.md) */
+  --color-cloud-white: #ffffff;
+  --color-ghost-gray: #e7e6f4;
+  --color-lavender-mist: #f1f2f9;
+  --color-grape-vine: #281950;
+  --color-lavender-bloom: #a39ac1;
+  --color-muted-violet: #5e537c;
+  --color-electric-violet: #7c3aed;
+  --color-electric-violet-soft: #a78bfa;
+  --color-deep-plum: #191034;
+  --color-success-green: #10b981;
+  --color-info-blue: #3b82f6;
+  --color-warning-orange: #f59e0b;
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* Radii */
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-pill: rgba(91, 33, 182, 0.10) 0px 5px 5px -2px,
+                 rgba(91, 33, 182, 0.10) 0px 2px 4px -2px;
+  --shadow-card: rgba(32, 34, 55, 0.075) 0px 0px 0px 1px,
+                 rgba(32, 34, 55, 0.05) 0px 10px 15px -3px,
+                 rgba(32, 34, 55, 0.05) 0px 4px 6px -4px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background: var(--color-cloud-white);
+  color: var(--color-muted-violet);
+  font-family: var(--font-sans);
+  font-weight: 450;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-electric-violet);
+  color: var(--color-cloud-white);
+}
+
+/* Soft pastel haze the design system asks for on most surfaces */
+.haze-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 90% 0%, rgba(125, 211, 252, 0.18), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 0% 100%, rgba(249, 168, 212, 0.15), transparent 60%),
+    radial-gradient(ellipse 60% 60% at 50% 50%, rgba(165, 180, 252, 0.10), transparent 70%),
+    var(--color-cloud-white);
+}
+
+/* Reusable component classes (Tailwind-friendly utilities) */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--radius-pill);
+  background: var(--color-electric-violet);
+  color: var(--color-cloud-white);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 80ms ease, background 120ms ease;
+  box-shadow: var(--shadow-pill);
+}
+.btn-primary:hover { background: #6d28d9; }
+.btn-primary:active { transform: translateY(1px); }
+.btn-primary:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: var(--radius-pill);
+  background: var(--color-cloud-white);
+  color: var(--color-grape-vine);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 15px;
+  border: 1px solid var(--color-ghost-gray);
+  cursor: pointer;
+  transition: background 120ms ease;
+}
+.btn-ghost:hover { background: var(--color-lavender-mist); }
+
+.input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--color-ghost-gray);
+  background: var(--color-cloud-white);
+  color: var(--color-grape-vine);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  outline: none;
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+.input:focus {
+  border-color: var(--color-electric-violet);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+.input::placeholder { color: var(--color-lavender-bloom); }
+
+.card {
+  background: var(--color-cloud-white);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-electric-violet);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: var(--color-grape-vine);
+}
+.display em {
+  font-style: italic;
+  color: var(--color-electric-violet);
+}
