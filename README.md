@@ -22,6 +22,42 @@ Built with [Slidev](https://sli.dev). Design tokens live in [`design.md`](./desi
 
 ---
 
+## The demo app — `app/`
+
+A working invoice console that demonstrates the talk's thesis: one Zod schema fans out into a REST API, an MCP server, and a CLI, all consuming the same in-memory store.
+
+```sh
+cd app
+bun install
+bun run dev
+```
+
+That starts:
+
+- **UI** (Vite + React 19 + Tailwind v4) at http://localhost:5173
+- **API + MCP** (Bun + Hono) at http://localhost:3001
+
+### What's exposed
+
+- **REST + OpenAPI** — Zod schemas drive runtime validation, the React client's types, and the spec at [`/api/openapi.json`](http://localhost:3001/api/openapi.json). Browseable Scalar reference at [`/api/docs`](http://localhost:3001/api/docs).
+- **MCP** — Streamable HTTP server at [`/mcp`](http://localhost:3001/mcp) via [`@hono/mcp`](https://honohub.dev/docs/hono-mcp). Six tools (`list_invoices`, `get_invoice`, `create_invoice`, `send_invoice`, `mark_paid`, `delete_invoice`), each with a Zod input schema. **Excluded from the OpenAPI document on purpose** — MCP has its own discovery via `tools/list`.
+- **CLI** — `ship` command built on commander.js. Calls the same REST API.
+
+```sh
+bun run ship list
+bun run ship create "ACME Corp" 200 --note "Q2 retainer"
+bun run ship send inv_01HZX9
+bun run ship mark-paid inv_01HZX9
+```
+
+### Why it matters for the talk
+
+Three substrates. One Zod schema. One in-memory store. Add a new endpoint and the UI types, the OpenAPI spec, the MCP tool surface, and the CLI all stay in lockstep without duplicate validation logic. That's the whole point of "agent-native."
+
+See [`app/README.md`](./app/README.md) for the deeper tour.
+
+---
+
 ## What the talk covers
 
 1. **The shift.** Developer tools are turning into agent runtimes (VS Code, Zed, JetBrains).
