@@ -6,6 +6,8 @@ Slides for the talk delivered at the **Digital Dreamers Den (D3) Anniversary Mee
 
 **Event:** [Digital Dreamers Den — Anniversary Meetup (Luma)](https://luma.com/event/evt-bBejtIHiuOOGaq1)
 
+**Recording:** [Watch on YouTube](https://www.youtube.com/live/Un4SmWPMH5Y?t=14538) (jumps to the talk start)
+
 **Speaker:** Dani Akash — Founding Engineer at [BrowserOS](https://browseros.com) (YC W24).
 
 ---
